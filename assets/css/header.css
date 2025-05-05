@@ -1,0 +1,474 @@
+/* header.css - Ferrum Insignia Quantum Header System */
+
+.quantum-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: var(--z-modal);
+    transition: all var(--duration-molecular) var(--ease-gravitational);
+    animation: headerReveal 0.8s var(--ease-gravitational) forwards;
+}
+
+@keyframes headerReveal {
+    0% { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Progress Bar - Minimalistischer silberner Fortschrittsbalken */
+.header-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(192, 192, 192, 0.1);
+    z-index: calc(var(--z-modal) + 5);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.progress-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--ferrum-silver) 0%,
+        var(--ferrum-platinum) 50%,
+        var(--ferrum-silver) 100%
+    );
+    background-size: 200% 100%;
+    animation: progressGradientAnimation 2s infinite linear;
+    transform-origin: left center;
+    will-change: width, transform;
+    box-shadow: 0 0 4px rgba(229, 228, 226, 0.3);
+    transition: width 0.1s var(--ease-quantum);
+}
+
+@keyframes progressGradientAnimation {
+    0% { background-position: 0% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.header-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+    opacity: 1;
+    transition: opacity var(--duration-atomic) var(--ease-quantum);
+}
+
+.quantum-header.scrolled .header-backdrop {
+    opacity: 1;
+    background: rgba(10, 10, 10, 0.95);
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-organic);
+}
+
+/* Logo Architecture */
+.header-logo {
+    z-index: 2;
+    position: relative;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-molecular);
+    text-decoration: none;
+}
+
+.logo-ferrum, .logo-insignia {
+    font-family: var(--font-aristocrat);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--ferrum-platinum);
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.logo-divider-vertical {
+    width: 1px;
+    height: 35px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--ferrum-silver),
+        transparent
+    );
+    opacity: 0.9;
+}
+
+.logo-link:hover .logo-ferrum,
+.logo-link:hover .logo-insignia {
+    background: var(--metallic-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-molecular);
+    z-index: 2;
+}
+
+/* Language Toggle - Optimized */
+.header-language-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-quantum);
+    margin-right: var(--spacing-atomic);
+}
+
+.language-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-modern);
+    font-size: 0.9rem;
+    color: var(--ferrum-silver);
+    cursor: pointer;
+    transition: all var(--duration-atomic) var(--ease-quantum);
+    padding: var(--spacing-atomic);
+}
+
+.language-btn[data-active="true"],
+.language-btn:hover {
+    color: var(--ferrum-platinum);
+}
+
+.language-divider {
+    color: var(--ferrum-silver);
+    opacity: 0.6;
+}
+
+/* Theme Toggle - Enhanced for better visibility and usability */
+.header-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(192, 192, 192, 0.05);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.header-theme-toggle svg {
+    position: absolute;
+    fill: var(--ferrum-silver);
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.header-theme-toggle:hover {
+    border-color: var(--ferrum-platinum);
+    background: rgba(192, 192, 192, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.1);
+}
+
+.header-theme-toggle:hover svg {
+    fill: var(--ferrum-platinum);
+}
+
+.theme-icon-light, 
+.theme-icon-dark {
+    transform: translateY(0);
+    opacity: 0;
+    transition: transform 0.3s var(--ease-gravitational),
+                opacity 0.3s var(--ease-gravitational);
+}
+
+/* Optimized theme icon visibility states */
+[data-theme="dark"] .theme-icon-dark {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-theme="dark"] .theme-icon-light {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+[data-theme="light"] .theme-icon-light {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-theme="light"] .theme-icon-dark {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/* Search Button */
+.header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(192, 192, 192, 0.05);
+    border: 1px solid rgba(192, 192, 192, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.header-search svg {
+    fill: var(--ferrum-silver);
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.header-search:hover {
+    border-color: var(--ferrum-platinum);
+    background: rgba(192, 192, 192, 0.1);
+    transform: scale(1.05);
+}
+
+.header-search:hover svg {
+    fill: var(--ferrum-platinum);
+}
+
+/* Login Button */
+.header-login {
+    position: relative;
+    padding: var(--spacing-atomic) var(--spacing-cellular);
+    background: transparent;
+    border: 1px solid var(--ferrum-silver);
+    color: var(--ferrum-pearl);
+    font-family: var(--font-modern);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all var(--duration-atomic) var(--ease-quantum);
+}
+
+.login-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--metallic-shine);
+    transition: all var(--duration-molecular) var(--ease-magnetic);
+}
+
+.header-login:hover .login-shimmer {
+    left: 100%;
+}
+
+.header-login:hover {
+    border-color: var(--ferrum-platinum);
+    background: rgba(192, 192, 192, 0.05);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation container */
+#navigation-container {
+    animation: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Header Adjustments */
+@media (max-width: 1600px) {
+    .header-container {
+        padding: 0 var(--spacing-organic);
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-actions {
+        gap: var(--spacing-atomic);
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.6rem;
+    }
+    
+    .logo-divider-vertical {
+        height: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .quantum-header {
+        height: 70px;
+    }
+    
+    .header-container {
+        padding: 0 var(--spacing-cellular);
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.3rem;
+    }
+    
+    .logo-divider-vertical {
+        height: 25px;
+    }
+    
+    .header-language-toggle {
+        display: none;
+    }
+    
+    .header-theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .header-theme-toggle svg,
+    .header-search svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quantum-header {
+        height: 60px;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.2rem;
+    }
+    
+    .logo-divider-vertical {
+        height: 22px;
+    }
+    
+    .header-search {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .header-login {
+        padding: var(--spacing-quantum) var(--spacing-molecular);
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container {
+        padding: 0 var(--spacing-molecular);
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.1rem;
+    }
+    
+    .logo-divider-vertical {
+        height: 20px;
+    }
+    
+    .header-theme-toggle,
+    .header-search {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .header-theme-toggle svg,
+    .header-search svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .header-login {
+        padding: var(--spacing-quantum) var(--spacing-atomic);
+        font-size: 0.7rem;
+    }
+}
+
+/* Theme-specific adjustments */
+[data-theme="light"] .header-backdrop {
+    background: rgba(245, 245, 245, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .quantum-header.scrolled .header-backdrop {
+    background: rgba(245, 245, 245, 0.95);
+}
+
+[data-theme="light"] .header-progress-bar {
+    background: rgba(26, 26, 26, 0.05);
+}
+
+[data-theme="light"] .progress-indicator {
+    background: linear-gradient(
+        90deg,
+        var(--ferrum-carbon) 0%,
+        var(--ferrum-obsidian) 50%,
+        var(--ferrum-carbon) 100%
+    );
+    box-shadow: 0 0 4px rgba(26, 26, 26, 0.2);
+}
+
+[data-theme="light"] .header-search,
+[data-theme="light"] .header-theme-toggle {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .header-search:hover,
+[data-theme="light"] .header-theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: var(--ferrum-platinum);
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .header-progress-bar {
+        height: 0.5px;
+    }
+    
+    .progress-indicator {
+        height: 0.5px;
+    }
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+    .quantum-header,
+    .header-theme-toggle,
+    .header-search,
+    .header-login,
+    .progress-indicator {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
