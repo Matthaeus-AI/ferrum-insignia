@@ -1,0 +1,512 @@
+/* main.css - Ferrum Insignia Ultra-Premium Design System */
+
+/* Advanced CSS Architecture - Precision Variables */
+:root {
+    /* Dark Theme (Default) */
+    
+    /* Premium Color Matrix */
+    --ferrum-void: #0a0a0a;
+    --ferrum-obsidian: #121212;
+    --ferrum-carbon: #1a1a1a;
+    --ferrum-silver: #c0c0c0;
+    --ferrum-platinum: #e5e4e2;
+    --ferrum-pearl: #f8f8f8;
+    --ferrum-gold-accent: #d4af37;
+    
+    /* Background Colors */
+    --background-primary: var(--ferrum-void);
+    --background-secondary: var(--ferrum-obsidian);
+    --background-tertiary: var(--ferrum-carbon);
+    
+    /* Text Colors */
+    --text-primary: var(--ferrum-platinum);
+    --text-secondary: var(--ferrum-silver);
+    --text-tertiary: rgba(192, 192, 192, 0.7);
+    
+    /* Border Colors */
+    --border-primary: rgba(192, 192, 192, 0.1);
+    --border-secondary: rgba(192, 192, 192, 0.2);
+    
+    /* UI Elements */
+    --ui-element-bg: rgba(255, 255, 255, 0.03);
+    --ui-element-hover: rgba(255, 255, 255, 0.08);
+    --ui-element-active: rgba(255, 255, 255, 0.12);
+    
+    /* Overlay Colors */
+    --overlay-light: rgba(255, 255, 255, 0.05);
+    --overlay-medium: rgba(0, 0, 0, 0.5);
+    --overlay-dark: rgba(0, 0, 0, 0.8);
+    
+    /* Metallic Gradient Compositions - Enhanced */
+    --metallic-silver: linear-gradient(135deg, 
+        #e8e8e8 0%, 
+        #c0c0c0 20%, 
+        #a8a8a8 40%, 
+        #c0c0c0 60%, 
+        #e8e8e8 80%, 
+        #f0f0f0 100%
+    );
+    
+    --metallic-platinum: linear-gradient(90deg,
+        #e5e4e2 0%,
+        #d1d0ce 25%,
+        #f5f5f5 50%,
+        #d1d0ce 75%,
+        #e5e4e2 100%
+    );
+    
+    --metallic-gold: linear-gradient(135deg,
+        #f4d03f 0%,
+        #d4ac0d 25%,
+        #f1c40f 50%,
+        #b7950b 75%,
+        #f4d03f 100%
+    );
+    
+    --metallic-shine: linear-gradient(120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.05) 45%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.05) 55%,
+        rgba(255,255,255,0) 100%
+    );
+    
+    /* Enhanced metallic text effects */
+    --text-shadow-metallic: 0 0 1px rgba(255,255,255,0.05), 
+                           0 1px 2px rgba(0,0,0,0.3);
+    
+    /* Premium Typography Metrics */
+    --font-aristocrat: 'Cinzel', serif;
+    --font-elegant: 'Cormorant Garamond', serif;
+    --font-modern: 'Forum', sans-serif;
+    
+    /* Mathematical Spacing System */
+    --quantum-unit: 0.25rem;
+    --spacing-quantum: calc(var(--quantum-unit) * 1);
+    --spacing-atomic: calc(var(--quantum-unit) * 2);
+    --spacing-molecular: calc(var(--quantum-unit) * 4);
+    --spacing-cellular: calc(var(--quantum-unit) * 8);
+    --spacing-organic: calc(var(--quantum-unit) * 16);
+    --spacing-cosmic: calc(var(--quantum-unit) * 32);
+    
+    /* Physics-Based Animation Curves */
+    --ease-quantum: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-gravitational: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-magnetic: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    
+    /* Precise Animation Durations */
+    --duration-quantum: 150ms;
+    --duration-atomic: 300ms;
+    --duration-molecular: 600ms;
+    --duration-organic: 1200ms;
+    
+    /* Z-Index Hierarchy */
+    --z-surface: 1;
+    --z-elevated: 10;
+    --z-overlay: 100;
+    --z-modal: 1000;
+    --z-quantum: 10000;
+    
+    /* Shadow System */
+    --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 5px 20px rgba(0, 0, 0, 0.2);
+    --shadow-intense: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    /* Override Color Matrix */
+    --ferrum-void: #f8f8f8;
+    --ferrum-obsidian: #f0f0f0;
+    --ferrum-carbon: #e0e0e0;
+    --ferrum-silver: #505050;
+    --ferrum-platinum: #1a1a1a;
+    --ferrum-pearl: #0a0a0a;
+    
+    /* Background Colors */
+    --background-primary: var(--ferrum-void);
+    --background-secondary: var(--ferrum-obsidian);
+    --background-tertiary: var(--ferrum-carbon);
+    
+    /* Text Colors */
+    --text-primary: var(--ferrum-platinum);
+    --text-secondary: var(--ferrum-silver);
+    --text-tertiary: rgba(80, 80, 80, 0.7);
+    
+    /* Border Colors */
+    --border-primary: rgba(0, 0, 0, 0.1);
+    --border-secondary: rgba(0, 0, 0, 0.2);
+    
+    /* UI Elements */
+    --ui-element-bg: rgba(0, 0, 0, 0.03);
+    --ui-element-hover: rgba(0, 0, 0, 0.08);
+    --ui-element-active: rgba(0, 0, 0, 0.12);
+    
+    /* Overlay Colors */
+    --overlay-light: rgba(0, 0, 0, 0.05);
+    --overlay-medium: rgba(255, 255, 255, 0.5);
+    --overlay-dark: rgba(255, 255, 255, 0.8);
+    
+    /* Metallic Gradient Compositions */
+    --metallic-silver: linear-gradient(135deg, 
+        #505050 0%, 
+        #707070 20%, 
+        #505050 40%, 
+        #707070 60%, 
+        #505050 80%, 
+        #404040 100%
+    );
+    
+    --metallic-platinum: linear-gradient(90deg,
+        #1a1a1a 0%,
+        #2a2a2a 25%,
+        #1a1a1a 50%,
+        #2a2a2a 75%,
+        #1a1a1a 100%
+    );
+    
+    --metallic-shine: linear-gradient(120deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.05) 45%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.05) 55%,
+        rgba(0,0,0,0) 100%
+    );
+    
+    /* Text shadow update for light theme */
+    --text-shadow-metallic: 0 0 1px rgba(0,0,0,0.05), 
+                           0 1px 2px rgba(255,255,255,0.3);
+    
+    /* Shadow System */
+    --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --shadow-intense: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Precision Reset Protocol */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: var(--background-primary);
+    color: var(--text-primary);
+    transition: background-color var(--duration-molecular) var(--ease-gravitational);
+}
+
+body {
+    font-family: var(--font-elegant);
+    font-weight: 400;
+    line-height: 1.618;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    color: var(--text-secondary);
+    transition: color var(--duration-molecular) var(--ease-gravitational);
+}
+
+/* Refined Typography System */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-aristocrat);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    color: var(--text-primary);
+    transition: color var(--duration-molecular) var(--ease-gravitational);
+}
+
+.h1-quantum { font-size: 3.815rem; }
+.h2-atomic { font-size: 3.052rem; }
+.h3-molecular { font-size: 2.441rem; }
+.h4-cellular { font-size: 1.953rem; }
+.h5-organic { font-size: 1.563rem; }
+.h6-compound { font-size: 1.25rem; }
+
+p {
+    font-family: var(--font-modern);
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+    transition: color var(--duration-molecular) var(--ease-gravitational);
+}
+
+/* Theme Transition for All Elements */
+section, article, div, header, footer, nav, aside, main, button, input, textarea, select {
+    transition: 
+        background-color var(--duration-molecular) var(--ease-gravitational),
+        color var(--duration-molecular) var(--ease-gravitational),
+        border-color var(--duration-molecular) var(--ease-gravitational),
+        box-shadow var(--duration-molecular) var(--ease-gravitational);
+}
+
+/* ============================================================
+   ENHANCED METALLIC TEXT EFFECTS
+   ============================================================ */
+.text-metallic {
+    background: var(--metallic-silver);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    transition: background var(--duration-molecular) var(--ease-gravitational);
+    text-shadow: var(--text-shadow-metallic);
+    will-change: background-position;
+}
+
+.text-metallic::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--metallic-shine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    animation: metallicShine 8s infinite linear;
+    transition: background var(--duration-molecular) var(--ease-gravitational);
+}
+
+/* Platinum variation */
+.text-platinum {
+    background: var(--metallic-platinum);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    text-shadow: var(--text-shadow-metallic);
+}
+
+.text-platinum::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--metallic-shine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    animation: metallicShine 8s infinite linear;
+}
+
+/* Gold variation */
+.text-gold {
+    background: var(--metallic-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    text-shadow: var(--text-shadow-metallic);
+}
+
+.text-gold::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--metallic-shine);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    animation: metallicShine 6s infinite linear;
+}
+
+@keyframes metallicShine {
+    0% { 
+        background-position: -500% 0;
+        opacity: 0;
+    }
+    50% { opacity: 0.6; }
+    100% { 
+        background-position: 500% 0;
+        opacity: 0;
+    }
+}
+
+/* Quantum Animation Foundations */
+@keyframes quantumFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(90deg); }
+    50% { transform: translate(0, -20px) rotate(180deg); }
+    75% { transform: translate(-10px, -10px) rotate(270deg); }
+}
+
+@keyframes silverShimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes chromaticShift {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Section Divider Component */
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--ferrum-silver) 50%,
+        transparent 100%
+    );
+    margin: var(--spacing-cellular) 0;
+    overflow: hidden;
+    opacity: 0.4;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        transparent 100%
+    );
+    animation: dividerShine 6s infinite linear;
+}
+
+@keyframes dividerShine {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(200%); }
+}
+
+/* Premium Interactive States */
+.interactive-element {
+    transition: all var(--duration-atomic) var(--ease-gravitational);
+    cursor: pointer;
+}
+
+.interactive-element:hover {
+    transform: translateY(-2px);
+}
+
+.interactive-element:active {
+    transform: translateY(0);
+}
+
+/* Precision Focus States */
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--ferrum-silver);
+}
+
+:focus:not(:focus-visible) {
+    box-shadow: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+}
+
+/* Premium Selection */
+::selection {
+    background: var(--text-secondary);
+    color: var(--background-primary);
+}
+
+/* Scrollbar Refinement */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+/* Theme-specific Button Styles */
+button, 
+.btn,
+.cta-quantum,
+.configurator-button,
+.contact-submit {
+    background-color: var(--ui-element-bg);
+    color: var(--text-primary);
+    border-color: var(--border-secondary);
+}
+
+button:hover, 
+.btn:hover,
+.cta-quantum:hover,
+.configurator-button:hover,
+.contact-submit:hover {
+    background-color: var(--ui-element-hover);
+    border-color: var(--text-primary);
+}
+
+/* Theme-specific Input Styles */
+input, textarea, select {
+    background-color: var(--ui-element-bg);
+    color: var(--text-primary);
+    border-color: var(--border-secondary);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--text-primary);
+    background-color: var(--ui-element-hover);
+}
+
+/* Theme-specific Card Styles */
+.card, .product-card, .tech-feature {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-primary);
+    box-shadow: var(--shadow-subtle);
+}
+
+.card:hover, .product-card:hover, .tech-feature:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+/* Responsive Design Matrices */
+@media (max-width: 1200px) {
+    html { font-size: 15px; }
+}
+
+@media (max-width: 992px) {
+    html { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 13px; }
+}
+
+@media (max-width: 576px) {
+    html { font-size: 12px; }
+}
