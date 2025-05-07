@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Home",
+    "story": "Geschichte",
+    "collection": "Kollektion",
+    "technology": "Technologie",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "configure": "Konfigurieren",
+    "login": "Login"
+  },
+  "header": {
+    "login": "Login"
+  },
+  "hero": {
+    "subtitle": "Die Kunst der metallischen Signatur",
+    "cta": "Entdecken Sie unsere Kollektion"
+  },
+  "story": {
+    "title": "Die Ferrum Geschichte",
+    "paragraph1": "Im Jahr 2025 revolutionierte Ferrum Insignia die Welt der Business-Signaturen. Unsere Vision: Die perfekte Symbiose aus traditioneller Metallkunst und modernster Technologie.",
+    "paragraph2": "Jede unserer Karten erzählt eine Geschichte von Exzellenz, Innovation und zeitloser Eleganz."
+  },
+  "products": {
+    "title": "Unsere Kollektionen",
+    "subtitle": "Meisterwerke der Metallverarbeitung",
+    "argent": {
+      "title": "Argent Éclat",
+      "description": "Eine brillante silberne Oberfläche, die das Licht einfängt und Ihre Präsenz unterstreicht. Der metallische Glanz symbolisiert Innovation und Fortschritt.",
+      "specs": {
+        "material": "Material",
+        "thickness": "Stärke",
+        "finish": "Finish",
+        "coating": "Veredelung",
+        "extras": "Extras",
+        "nfc": "NFC",
+        "qr": "QR-Code"
+      },
+      "cta": "Konfigurieren"
+    },
+    "luna": {
+      "title": "Luna Satin",
+      "description": "Die sanfte matte Oberfläche verkörpert subtile Eleganz und zurückhaltende Raffinesse. Ein Statement für diejenigen, die leise Exzellenz schätzen.",
+      "cta": "Konfigurieren"
+    },
+    "noir": {
+      "title": "Noir Brilliance",
+      "description": "Die Tiefe des Schwarz, gepaart mit einem schimmernden Glanz. Diese Karte verkörpert Macht und Mysterium in perfekter Harmonie.",
+      "cta": "Konfigurieren"
+    },
+    "obsidian": {
+      "title": "Obsidian Velvet",
+      "description": "Samtiges Schwarz, das keine Kompromisse eingeht. Die matte Oberfläche absorbiert das Licht und zieht alle Aufmerksamkeit auf sich.",
+      "cta": "Konfigurieren"
+    },
+    "aurum": {
+      "title": "Aurum Imperial",
+      "description": "Die ultimative Verkörperung von Prestige. Reines Gold für jene, die keine Grenzen kennen. Ein zeitloses Statement höchster Exklusivität.",
+      "cta": "Konfigurieren"
+    },
+    "flip": "Tippen zum Drehen"
+  },
+  "technology": {
+    "title": "Technologie & Innovation",
+    "nfc": {
+      "title": "NFC Integration",
+      "description": "Nahtlose digitale Vernetzung mit einem Fingertipp.",
+      "link": "Mehr erfahren"
+    },
+    "qr": {
+      "title": "Smart QR",
+      "description": "Dynamische QR-Codes für flexible Informationsvermittlung.",
+      "link": "Mehr erfahren"
+    }
+  },
+  "about": {
+    "title": "Über Ferrum Insignia",
+    "description": "Ferrum Insignia steht für die Perfektion im Detail und die Leidenschaft für außergewöhnliche Produkte. Unsere metallischen Visitenkarten sind mehr als nur Kontaktdaten – sie sind ein Statement."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "company": "Ferrum Insignia GmbH",
+    "address": "Maschstraße 70\n31137 Hildesheim",
+    "phone": "Tel: +49 1726976511",
+    "email": "Email: info@ferrum-insignia.de",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Ihre Nachricht",
+      "send": "Nachricht senden"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Ferrum Insignia GmbH. Alle Rechte vorbehalten."
+  }
+}

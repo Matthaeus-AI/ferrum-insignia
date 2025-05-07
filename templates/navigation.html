@@ -1,0 +1,84 @@
+<!-- navigation.html - Ferrum Insignia Quantum Navigation Architecture -->
+<nav class="quantum-navigation">
+    <!-- Desktop Navigation -->
+    <ul class="nav-primary">
+        <li class="nav-item" data-quantum="hero">
+            <a href="#hero" class="nav-link" id="home-nav-link">Home</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="story">
+            <a href="#story" class="nav-link">Geschichte</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="products">
+            <a href="#products" class="nav-link">Kollektion</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="technology">
+            <a href="#technology" class="nav-link">Technologie</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="about">
+            <a href="#about" class="nav-link">Über Uns</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="contact">
+            <a href="#contact" class="nav-link">Kontakt</a>
+            <div class="nav-indicator"></div>
+        </li>
+        <li class="nav-item" data-quantum="configurator">
+            <a href="configurator.html" class="nav-link nav-link-external">Konfigurieren</a>
+            <div class="nav-indicator"></div>
+        </li>
+    </ul>
+    
+    <!-- Mobile Navigation Trigger -->
+    <button class="mobile-nav-trigger" aria-label="Menu" id="mobileNavTrigger">
+        <span class="trigger-line"></span>
+        <span class="trigger-line"></span>
+        <span class="trigger-line"></span>
+    </button>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-container">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <span class="logo-ferrum">FERRUM</span>
+                    <span class="logo-divider-vertical"></span>
+                    <span class="logo-insignia">INSIGNIA</span>
+                </div>
+                <button class="mobile-nav-close" id="mobileNavClose">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="mobile-nav-list">
+                <li><a href="#hero" class="mobile-nav-link" data-section="hero" data-i18n="nav.home">Home</a></li>
+                <li><a href="#story" class="mobile-nav-link" data-section="story" data-i18n="nav.story">Geschichte</a></li>
+                <li><a href="#products" class="mobile-nav-link" data-section="products" data-i18n="nav.collection">Kollektion</a></li>
+                <li><a href="#technology" class="mobile-nav-link" data-section="technology" data-i18n="nav.technology">Technologie</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-section="about" data-i18n="nav.about">Über Uns</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-section="contact" data-i18n="nav.contact">Kontakt</a></li>
+                <li><a href="configurator.html" class="mobile-nav-link mobile-nav-link-external" data-i18n="nav.configure">Konfigurieren</a></li>
+                <li><a href="login.html" class="mobile-nav-link" data-i18n="nav.login">Login</a></li>
+            </ul>
+            <div class="mobile-nav-footer">
+                <div class="mobile-language-toggle">
+                    <button class="language-btn" data-language="de">DE</button>
+                    <span class="language-divider">|</span>
+                    <button class="language-btn" data-language="en">EN</button>
+                </div>
+                <button class="mobile-theme-toggle" id="mobileThemeToggle" data-theme-toggle="true">
+                    <svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.39 1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41.39.39 1.03.39 1.41 0l1.06-1.06z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
