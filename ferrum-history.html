@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrum Insignia - Die Geschichte des metallischen Vermächtnisses">
+    <title>Ferrum Insignia | Geschichte</title>
+    
+    <!-- Preload kritische Ressourcen -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- Preconnect für Schriftarten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Schriftarten -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Forum&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Globale Stildateien -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-progress.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    
+    <!-- Seitenspezifisches CSS -->
+    <link rel="stylesheet" href="assets/css/ferrum-history.css">
+    
+    <!-- Theming -->
+    <link rel="stylesheet" href="assets/css/theme-dark.css" id="theme-dark">
+    <link rel="stylesheet" href="assets/css/theme-light.css" id="theme-light" disabled>
+</head>
+<body>
+    <!-- Ladeanimation -->
+    <div class="loader-container" id="loader">
+        <div class="loader-quantum">
+            <div class="loader-particle"></div>
+            <div class="loader-particle"></div>
+            <div class="loader-particle"></div>
+        </div>
+    </div>
+
+    <!-- Header-Template-Container -->
+    <div id="header-container"></div>
+
+    <!-- Navigation-Template-Container -->
+    <div id="navigation-container"></div>
+
+    <!-- Hauptinhalt -->
+    <main class="history-main-container">
+        <section class="history-hero">
+            <div class="history-hero-content">
+                <h1 class="history-title" data-i18n="history.title">Das Ferrum Vermächtnis</h1>
+                <p class="history-subtitle" data-i18n="history.subtitle">Eine Chronik der Metallrevolution</p>
+            </div>
+            <div class="history-hero-backdrop"></div>
+        </section>
+
+        <section class="history-timeline">
+            <div class="timeline-container">
+                <!-- Zeitstrahl-Linie -->
+                <div class="timeline-line"></div>
+
+                <!-- Ursprungskapitel -->
+                <div class="timeline-node" id="origin">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title" data-i18n="history.origin.title">Die Ursprünge</h2>
+                        <div class="timeline-chapter">
+                            <p data-i18n="history.origin.p1">Alles begann mit einer einfachen Beobachtung: In einer zunehmend digitalen Welt bleiben physische Eindrücke die wirkungsvollsten. Die Vergänglichkeit herkömmlicher Visitenkarten stand in starkem Kontrast zu der Bedeutung, die wir ihnen beimessen.</p>
+                            <p data-i18n="history.origin.p2">In einem kleinen Metallurgielabor in München experimentierten unsere Gründer mit verschiedenen Legierungen und Techniken, auf der Suche nach dem perfekten Medium für eine bleibende Geschäftspräsenz.</p>
+                            <blockquote class="history-quote" data-i18n="history.origin.quote">"Wir wollten nicht nur eine Visitenkarte schaffen, sondern ein Objekt, das man behalten möchte."</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entwicklungskapitel -->
+                <div class="timeline-node" id="development">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title" data-i18n="history.development.title">Die Entwicklungsphase</h2>
+                        <div class="timeline-chapter">
+                            <p data-i18n="history.development.p1">Nach monatelanger Forschung und zahllosen Prototypen gelang der Durchbruch: Eine spezielle Behandlungsmethode, die es ermöglichte, ultradünne Metallplatten mit komplexen Gravuren zu versehen, ohne deren strukturelle Integrität zu beeinträchtigen.</p>
+                            <p data-i18n="history.development.p2">Die ersten Ferrum-Karten wurden in Handarbeit gefertigt – jede ein Unikat, jede ein Kunstwerk. Das Feedback der ersten Testnutzer übertraf alle Erwartungen und bestätigte unsere Vision.</p>
+                            <div class="timeline-milestone">
+                                <div class="milestone-indicator"></div>
+                                <div class="milestone-content" data-i18n="history.development.milestone">Patent für das Ferrum-Gravurverfahren angemeldet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expansionskapitel -->
+                <div class="timeline-node" id="expansion">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title" data-i18n="history.expansion.title">Die Expansion</h2>
+                        <div class="timeline-chapter">
+                            <p data-i18n="history.expansion.p1">Mit der wachsenden Nachfrage erweiterten wir unsere Produktionskapazitäten. Hochpräzise Lasergravurmaschinen wurden installiert, um die Detailgenauigkeit zu erhöhen und gleichzeitig die Skalierbarkeit zu verbessern.</p>
+                            <p data-i18n="history.expansion.p2">In diesem Jahr begann auch die Integration digitaler Elemente: NFC-Chips und QR-Codes wurden nahtlos in unsere Metallkarten integriert und schufen so eine Brücke zwischen der physischen Eleganz des Metalls und der Funktionalität der digitalen Welt.</p>
+                            <div class="timeline-milestone">
+                                <div class="milestone-indicator"></div>
+                                <div class="milestone-content" data-i18n="history.expansion.milestone">Eröffnung des Ferrum Innovation Centers in Berlin</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gegenwartkapitel -->
+                <div class="timeline-node" id="present">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title" data-i18n="history.present.title">Die Gegenwart</h2>
+                        <div class="timeline-chapter">
+                            <p data-i18n="history.present.p1">Heute steht Ferrum Insignia an der Spitze einer neuen Ära der Geschäftspräsentation. Unsere Karten werden in über 30 Ländern verwendet und haben die Art und Weise, wie Menschen ihre professionelle Identität kommunizieren, grundlegend verändert.</p>
+                            <p data-i18n="history.present.p2">Mit der Einführung unseres Online-Konfigurators demokratisieren wir den Zugang zu premium Metallkarten und ermöglichen jedem, sein eigenes metallisches Vermächtnis zu gestalten.</p>
+                            <blockquote class="history-quote" data-i18n="history.present.quote">"Was als Experiment begann, ist zu einer Bewegung geworden. Jede Ferrum-Karte erzählt eine Geschichte von Qualität, Beständigkeit und Aufmerksamkeit für Details."</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zukunftskapitel -->
+                <div class="timeline-node" id="future">
+                    <div class="timeline-year">Vision</div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title" data-i18n="history.future.title">Die Zukunftsvision</h2>
+                        <div class="timeline-chapter">
+                            <p data-i18n="history.future.p1">Unsere Reise hat gerade erst begonnen. Wir forschen kontinuierlich an neuen Materialien, Technologien und Anwendungsbereichen für unsere Metallkunst.</p>
+                            <p data-i18n="history.future.p2">Die Zukunft von Ferrum Insignia liegt in der perfekten Verschmelzung von haptischer Eleganz und digitaler Funktionalität – in Objekten, die nicht nur Informationen tragen, sondern Emotionen wecken und Geschichten erzählen.</p>
+                            <div class="history-vision-container">
+                                <div class="history-vision-element" data-i18n="history.future.vision1">Neue Materialien</div>
+                                <div class="history-vision-element" data-i18n="history.future.vision2">Erweiterte Realität</div>
+                                <div class="history-vision-element" data-i18n="history.future.vision3">Globale Expansion</div>
+                                <div class="history-vision-element" data-i18n="history.future.vision4">Nachhaltige Produktion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-values" id="about">
+            <div class="values-container">
+                <h2 class="values-title" data-i18n="history.values.title">Unsere Grundwerte</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon value-icon-quality"></div>
+                        <h3 class="value-name" data-i18n="history.values.quality.title">Kompromisslose Qualität</h3>
+                        <p class="value-description" data-i18n="history.values.quality.description">Jedes Detail ist wichtig. Von der Materialauswahl bis zur finalen Politur streben wir nach Perfektion.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon value-icon-innovation"></div>
+                        <h3 class="value-name" data-i18n="history.values.innovation.title">Kontinuierliche Innovation</h3>
+                        <p class="value-description" data-i18n="history.values.innovation.description">Wir ruhen uns nie auf unseren Erfolgen aus. Unser Forschungsteam arbeitet ständig an neuen Technologien und Verfahren.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon value-icon-sustainability"></div>
+                        <h3 class="value-name" data-i18n="history.values.sustainability.title">Nachhaltigkeit</h3>
+                        <p class="value-description" data-i18n="history.values.sustainability.description">Unsere Produkte sind nicht nur langlebig, sondern auch nachhaltig produziert. Wir kompensieren jeden CO₂-Fußabdruck.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon value-icon-craftsmanship"></div>
+                        <h3 class="value-name" data-i18n="history.values.craftsmanship.title">Handwerkskunst</h3>
+                        <p class="value-description" data-i18n="history.values.craftsmanship.description">Trotz moderner Technologie bleibt das Handwerk im Zentrum. Jede Karte wird von erfahrenen Handwerkern geprüft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-team">
+            <div class="team-container">
+                <h2 class="team-title" data-i18n="history.team.title">Unser Team</h2>
+                <p class="team-description" data-i18n="history.team.description">Hinter Ferrum Insignia steht ein Team leidenschaftlicher Experten, die Innovation, Exzellenz und Handwerkskunst vereinen.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-portrait">
+                            <div class="portrait-metallic"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name" data-i18n="history.team.member1.name">Dr. Markus Weber</h3>
+                            <p class="member-position" data-i18n="history.team.member1.position">Gründer & CEO</p>
+                            <p class="member-bio" data-i18n="history.team.member1.bio">Mit einem Hintergrund in Materialwissenschaften und einer Vision für Exzellenz führt Dr. Weber das Unternehmen mit Präzision und Innovation.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-portrait">
+                            <div class="portrait-metallic"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name" data-i18n="history.team.member2.name">Sophia Becker</h3>
+                            <p class="member-position" data-i18n="history.team.member2.position">Kreativdirektorin</p>
+                            <p class="member-bio" data-i18n="history.team.member2.bio">Mit ihrem Gespür für ästhetische Perfektion und funktionales Design verleiht Sophia jeder Karte ihre unverwechselbare Identität.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-portrait">
+                            <div class="portrait-metallic"></div>
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name" data-i18n="history.team.member3.name">Lukas Schumann</h3>
+                            <p class="member-position" data-i18n="history.team.member3.position">Technischer Leiter</p>
+                            <p class="member-bio" data-i18n="history.team.member3.bio">Als Brücke zwischen Tradition und Innovation entwickelt Lukas die Fertigungstechnologien, die unsere Vision Wirklichkeit werden lassen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-mission">
+            <div class="mission-container">
+                <div class="mission-content">
+                    <h2 class="mission-title" data-i18n="history.mission.title">Unsere Mission</h2>
+                    <blockquote class="mission-statement" data-i18n="history.mission.statement">
+                        Wir erschaffen nicht nur Visitenkarten, sondern metallische Kunstwerke, die professionelle Identitäten mit zeitloser Eleganz verkörpern.
+                    </blockquote>
+                    <p class="mission-text" data-i18n="history.mission.text">
+                        Unsere Mission ist es, die Kultur der professionellen Präsentation zu revolutionieren. Indem wir Technologie, Design und Handwerkskunst vereinen, schaffen wir Objekte, die über ihre unmittelbare Funktion hinaus einen bleibenden Eindruck hinterlassen und ein Statement für Qualität und Nachhaltigkeit setzen.
+                    </p>
+                    <div class="mission-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label" data-i18n="history.mission.stat1">Länder</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50.000+</div>
+                            <div class="stat-label" data-i18n="history.mission.stat2">Kunden</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label" data-i18n="history.mission.stat3">Materialkollektionen</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-image">
+                    <div class="image-metallic"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-Template-Container -->
+    <div id="footer-container"></div>
+
+    <!-- Scroll-Progress-Indikator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Core-Scripts -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/scroll-progress.js" defer></script>
+    <script src="assets/js/loader.js" defer></script>
+    <script src="assets/js/language.js" defer></script>
+    
+    <!-- Seitenspezifisches JavaScript -->
+    <script src="assets/js/ferrum-history.js" defer></script>
+</body>
+</html>
