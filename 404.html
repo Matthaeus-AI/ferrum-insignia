@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrum Insignia - Seite nicht gefunden">
+    <title>404 - Seite nicht gefunden | Ferrum Insignia</title>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Forum&display=swap" rel="stylesheet">
+    
+    <!-- Integrierte Stylesheets für autonome Funktionalität -->
+    <style>
+        /* Core Variables */
+        :root {
+            /* Dark Theme (Default) */
+            --ferrum-void: #0a0a0a;
+            --ferrum-obsidian: #121212;
+            --ferrum-carbon: #1a1a1a;
+            --ferrum-silver: #c0c0c0;
+            --ferrum-platinum: #e5e4e2;
+            --ferrum-pearl: #f8f8f8;
+            --ferrum-gold-accent: #d4af37;
+            
+            /* Typography */
+            --font-aristocrat: 'Cinzel', serif;
+            --font-elegant: 'Cormorant Garamond', serif;
+            --font-modern: 'Forum', sans-serif;
+            
+            /* Spacing System */
+            --quantum-unit: 0.25rem;
+            --spacing-quantum: calc(var(--quantum-unit) * 1);
+            --spacing-atomic: calc(var(--quantum-unit) * 2);
+            --spacing-molecular: calc(var(--quantum-unit) * 4);
+            --spacing-cellular: calc(var(--quantum-unit) * 8);
+            --spacing-organic: calc(var(--quantum-unit) * 16);
+            --spacing-cosmic: calc(var(--quantum-unit) * 32);
+            
+            /* Animation */
+            --ease-quantum: cubic-bezier(0.25, 0.1, 0.25, 1);
+            --duration-atomic: 300ms;
+            --duration-molecular: 600ms;
+            
+            /* Metallic Gradients */
+            --metallic-silver: linear-gradient(135deg, 
+                #e8e8e8 0%, 
+                #c0c0c0 20%, 
+                #a8a8a8 40%, 
+                #c0c0c0 60%, 
+                #e8e8e8 80%, 
+                #f0f0f0 100%
+            );
+            
+            --metallic-platinum: linear-gradient(90deg,
+                #e5e4e2 0%,
+                #d1d0ce 25%,
+                #f5f5f5 50%,
+                #d1d0ce 75%,
+                #e5e4e2 100%
+            );
+            
+            --metallic-gold: linear-gradient(135deg,
+                #f4d03f 0%,
+                #d4ac0d 25%,
+                #f1c40f 50%,
+                #b7950b 75%,
+                #f4d03f 100%
+            );
+            
+            --metallic-shine: linear-gradient(120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.05) 45%,
+                rgba(255,255,255,0.2) 50%,
+                rgba(255,255,255,0.05) 55%,
+                rgba(255,255,255,0) 100%
+            );
+        }
+        
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            background: var(--ferrum-void);
+            color: var(--ferrum-silver);
+            font-family: var(--font-elegant);
+            line-height: 1.6;
+        }
+        
+        /* 404 Container */
+        .error-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: var(--spacing-cosmic);
+            text-align: center;
+            z-index: 1;
+        }
+        
+        /* Metallic Particle Background */
+        .error-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--ferrum-silver);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(100px, -50px); }
+            50% { transform: translate(50px, 100px); }
+            75% { transform: translate(-50px, 50px); }
+        }
+        
+        /* Generate particles with different properties */
+        .particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 30%; left: 15%; animation-delay: 1s; }
+        .particle:nth-child(3) { top: 40%; left: 40%; animation-delay: 2s; }
+        .particle:nth-child(4) { top: 10%; left: 60%; animation-delay: 3s; }
+        .particle:nth-child(5) { top: 50%; left: 80%; animation-delay: 4s; }
+        .particle:nth-child(6) { top: 70%; left: 20%; animation-delay: 5s; }
+        .particle:nth-child(7) { top: 80%; left: 30%; animation-delay: 6s; }
+        .particle:nth-child(8) { top: 60%; left: 70%; animation-delay: 7s; }
+        .particle:nth-child(9) { top: 90%; left: 50%; animation-delay: 8s; }
+        .particle:nth-child(10) { top: 25%; left: 85%; animation-delay: 9s; }
+        .particle:nth-child(11) { top: 15%; left: 45%; animation-delay: 10s; }
+        .particle:nth-child(12) { top: 65%; left: 15%; animation-delay: 11s; }
+        
+        /* Error Number */
+        .error-number {
+            font-family: var(--font-aristocrat);
+            font-size: 15rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-molecular);
+            position: relative;
+            background: var(--metallic-platinum);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: silverShimmer 6s infinite linear;
+        }
+        
+        @keyframes silverShimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        /* Error Title */
+        .error-title {
+            font-family: var(--font-aristocrat);
+            font-size: 2.5rem;
+            color: var(--ferrum-platinum);
+            margin-bottom: var(--spacing-cellular);
+            position: relative;
+        }
+        
+        .error-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--ferrum-silver), transparent);
+        }
+        
+        /* Error Description */
+        .error-description {
+            font-family: var(--font-elegant);
+            font-size: 1.2rem;
+            color: var(--ferrum-silver);
+            margin-bottom: var(--spacing-organic);
+            max-width: 600px;
+        }
+        
+        /* Return Button */
+        .return-button {
+            position: relative;
+            padding: var(--spacing-molecular) var(--spacing-organic);
+            background: transparent;
+            border: 1px solid var(--ferrum-silver);
+            color: var(--ferrum-pearl);
+            font-family: var(--font-modern);
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            overflow: hidden;
+            transition: all var(--duration-molecular) var(--ease-quantum);
+        }
+        
+        .button-shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--metallic-shine);
+            transition: all var(--duration-molecular) var(--ease-quantum);
+        }
+        
+        .return-button:hover .button-shimmer {
+            left: 100%;
+        }
+        
+        .return-button:hover {
+            border-color: var(--ferrum-platinum);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(192,192,192,0.15);
+        }
+        
+        /* Footer Line */
+        .error-footer {
+            position: absolute;
+            bottom: var(--spacing-organic);
+            font-family: var(--font-modern);
+            font-size: 0.9rem;
+            color: var(--ferrum-silver);
+            opacity: 0.7;
+        }
+        
+        /* Logo Design */
+        .mini-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-cellular);
+        }
+        
+        .logo-ferrum, .logo-insignia {
+            font-family: var(--font-aristocrat);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--ferrum-platinum);
+        }
+        
+        .logo-divider {
+            width: 1px;
+            height: 30px;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                var(--ferrum-silver),
+                transparent
+            );
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 10rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+                padding: 0 var(--spacing-molecular);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 7rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-description {
+                font-size: 0.9rem;
+            }
+            
+            .return-button {
+                padding: var(--spacing-atomic) var(--spacing-cellular);
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <!-- Particles Background -->
+        <div class="error-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <!-- Mini Logo -->
+        <div class="mini-logo">
+            <span class="logo-ferrum">FERRUM</span>
+            <span class="logo-divider"></span>
+            <span class="logo-insignia">INSIGNIA</span>
+        </div>
+        
+        <!-- Error Content -->
+        <div class="error-number">404</div>
+        <h1 class="error-title">Seite nicht gefunden</h1>
+        <p class="error-description">Die gesuchte Seite existiert nicht oder wurde verschoben. Wie unsere Metallkarten ist auch unser Webauftritt präzise gefertigt - diese Seite gehört jedoch nicht zum finalen Design.</p>
+        
+        <!-- Return Button -->
+        <a href="/" class="return-button">
+            <span>Zurück zur Startseite</span>
+            <div class="button-shimmer"></div>
+        </a>
+        
+        <!-- Footer -->
+        <div class="error-footer">
+            &copy; 2025 Ferrum Insignia GmbH. Alle Rechte vorbehalten.
+        </div>
+    </div>
+    
+    <!-- Optional: Basic particles animation -->
+    <script>
+        // Simple animation for particles to enhance the premium feel
+        document.addEventListener('DOMContentLoaded', function() {
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach(particle => {
+                // Random size between 1px and 3px
+                const size = Math.random() * 2 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.3 + 0.2;
+                
+                // Random animation duration
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = duration + 's';
+            });
+        });
+    </script>
+</body>
+</html>
