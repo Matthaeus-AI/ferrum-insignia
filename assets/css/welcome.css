@@ -1,0 +1,805 @@
+/* welcome.css - Ferrum Insignia Ultra-Premium Landing Experience 
+ * Mathematisch präzise Zentrierung mit bildschirmgrößen-synchronisierter Partikel-Optimierung
+ * Eliminierte störende Overlay-Interferenzen und implementierte statische Logo-Eleganz
+ */
+
+/* Quantum Container Architecture - Perfekte Viewport-Zentrierung */
+.quantum-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--ferrum-void);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Mathematisch präzise Zentrierung ohne Flexbox-Interferenz */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stellar Field Canvas System - Bildschirmgrößen-synchronisierte Optimierung */
+.hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-surface);
+    opacity: 0.8;
+    /* Performance-Optimierungen für bildschirmabhängige Sternenfeld-Komplexität */
+    will-change: transform;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    /* Hardware-Beschleunigung für Canvas-Operationen */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    /* Eliminierte Margin/Padding-Interferenzen */
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+/* Content Architecture - Mathematisch präzise Zentrierung */
+.insignia-content {
+    position: relative;
+    z-index: var(--z-overlay);
+    text-align: center;
+    padding: var(--spacing-cosmic);
+    animation: quantumFade 2s var(--ease-gravitational);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Verbesserte Lesbarkeit über Sternenfeld */
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+    /* Präzise Box-Model-Kontrolle */
+    box-sizing: border-box;
+    /* Vertikale Zentrierung innerhalb Flex-Container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 0; /* Verhindert Flex-Item-Overflow */
+}
+
+/* Logo Quantum Structure - Mathematisch präzise Zentral-Ausrichtung */
+.logo-quantum-container {
+    margin-bottom: var(--spacing-organic);
+    perspective: 1000px;
+    text-align: center;
+    width: 100%;
+    /* Erhöhter Kontrast über Sternenfeld */
+    filter: drop-shadow(0 0 20px rgba(192, 192, 192, 0.1));
+    /* Absolute horizontale Zentrierung */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-metallic-structure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-molecular);
+    transform-style: preserve-3d;
+    margin: 0;
+    /* Statische Position ohne störende Bewegung - Perfekte Zentrierung */
+    position: relative;
+    /* Präzise horizontale Ausrichtung */
+    width: fit-content;
+}
+
+.logo-ferrum, .logo-insignia {
+    font-family: var(--font-aristocrat);
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    /* Präziser monochromatischer Gradient für eleganten Schimmer-Effekt */
+    background: linear-gradient(
+        135deg,
+        #f8f8f8 0%,
+        #e0e0e0 15%,
+        #ffffff 30%,
+        #d8d8d8 45%,
+        #f0f0f0 60%,
+        #ffffff 75%,
+        #e8e8e8 90%,
+        #f8f8f8 100%
+    );
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    /* Eleganter, langsamer monochromatischer Schimmer ohne physikalische Bewegung */
+    animation: pureMetallicShimmer 15s infinite linear;
+    /* Verbesserte Sichtbarkeit über Sternenfeld */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+    /* Präzise Text-Alignment */
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Präzise monochromatische Schimmer-Animation ohne vertikale/horizontale Bewegung */
+@keyframes pureMetallicShimmer {
+    0% { 
+        background-position: 0% center;
+        filter: brightness(1) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+    }
+    25% { 
+        background-position: 100% center;
+        filter: brightness(1.05) drop-shadow(0 2px 15px rgba(255, 255, 255, 0.1));
+    }
+    50% { 
+        background-position: 200% center;
+        filter: brightness(1.1) drop-shadow(0 2px 20px rgba(255, 255, 255, 0.15));
+    }
+    75% { 
+        background-position: 300% center;
+        filter: brightness(1.05) drop-shadow(0 2px 15px rgba(255, 255, 255, 0.1));
+    }
+    100% { 
+        background-position: 400% center;
+        filter: brightness(1) drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.logo-ferrum::after, .logo-insignia::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* Sekundärer weißer Schimmer-Effekt für erhöhte Eleganz */
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgba(255,255,255,0.3) 20%, 
+        rgba(255,255,255,0.8) 40%,
+        rgba(255,255,255,1) 50%,
+        rgba(255,255,255,0.8) 60%,
+        rgba(255,255,255,0.3) 80%,
+        transparent 100%
+    );
+    background-size: 500% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Phasenverschobener eleganter Schimmer-Effekt */
+    animation: pureWhiteShimmer 12s infinite linear;
+    opacity: 0.6;
+}
+
+@keyframes pureWhiteShimmer {
+    0% { 
+        background-position: -500% center;
+        opacity: 0.4;
+    }
+    50% { 
+        background-position: 0% center;
+        opacity: 0.8;
+    }
+    100% { 
+        background-position: 500% center;
+        opacity: 0.4;
+    }
+}
+
+.logo-divider {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(220, 220, 220, 0.8),
+        transparent
+    );
+    opacity: 0.8;
+    /* Glow-Effekt für bessere Sichtbarkeit */
+    box-shadow: 0 0 10px rgba(220, 220, 220, 0.3);
+    /* Präzise vertikale Zentrierung */
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.logo-reflection {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(220, 220, 220, 0.6),
+        transparent
+    );
+    opacity: 0.6;
+    animation: stellarReflectionPulse 6s infinite ease-in-out;
+    /* Subtle glow für Tiefeneffekt */
+    box-shadow: 0 0 15px rgba(220, 220, 220, 0.2);
+}
+
+@keyframes stellarReflectionPulse {
+    0%, 100% { 
+        opacity: 0.4; 
+        width: 200px;
+        box-shadow: 0 0 10px rgba(220, 220, 220, 0.1);
+    }
+    50% { 
+        opacity: 0.8; 
+        width: 350px;
+        box-shadow: 0 0 25px rgba(220, 220, 220, 0.3);
+    }
+}
+
+/* Tagline Typography - Mathematisch präzise Zentrierung über Sternenfeld */
+.tagline-container {
+    margin-bottom: var(--spacing-organic);
+    opacity: 0;
+    animation: quantumFade 1.5s var(--ease-gravitational) 0.5s forwards;
+    text-align: center;
+    width: 100%;
+    /* Subtle backdrop für bessere Lesbarkeit */
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    /* Präzise Flex-Zentrierung */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagline-elite {
+    font-family: var(--font-elegant);
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--ferrum-platinum);
+    margin-bottom: var(--spacing-molecular);
+    /* Verbesserte Sichtbarkeit über Sternenfeld */
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+    /* Präzise Text-Alignment */
+    text-align: center;
+    line-height: 1.2;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tagline-separator {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(220, 220, 220, 0.8),
+        transparent
+    );
+    margin: var(--spacing-cellular) auto;
+    opacity: 0.7;
+    box-shadow: 0 0 8px rgba(220, 220, 220, 0.2);
+    /* Eliminierte Flex-Interferenz */
+    flex-shrink: 0;
+}
+
+.tagline-premium {
+    font-family: var(--font-modern);
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    color: var(--ferrum-silver);
+    text-transform: uppercase;
+    /* Verbesserte Sichtbarkeit */
+    text-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+    /* Präzise Text-Alignment */
+    text-align: center;
+    margin: 0;
+}
+
+/* Ultra-Premium CTA Button - Mathematisch zentriert für Sternenfeld */
+.cta-quantum-container {
+    margin-bottom: var(--spacing-organic);
+    opacity: 0;
+    animation: quantumFade 1.5s var(--ease-gravitational) 1s forwards;
+    /* Präzise Zentrierung */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cta-premium {
+    position: relative;
+    padding: var(--spacing-molecular) var(--spacing-organic);
+    font-family: var(--font-modern);
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    background: rgba(10, 10, 10, 0.3);
+    border: 1px solid rgba(220, 220, 220, 0.6);
+    color: var(--ferrum-platinum);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all var(--duration-molecular) var(--ease-gravitational);
+    /* Verbesserte Sichtbarkeit und Interaktion */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Präzise Button-Dimensionierung */
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+}
+
+.cta-metallic-gradient {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255,255,255,0.1) 45%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.1) 55%,
+        transparent 100%
+    );
+    transition: all var(--duration-molecular) var(--ease-magnetic);
+}
+
+.cta-edge-highlight {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 0;
+    transition: opacity var(--duration-atomic) var(--ease-quantum);
+    border-radius: inherit;
+}
+
+.cta-reflection {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(220, 220, 220, 0.6), transparent);
+    opacity: 0;
+    transition: opacity var(--duration-atomic) var(--ease-quantum);
+    box-shadow: 0 0 10px rgba(220, 220, 220, 0.3);
+}
+
+.cta-premium:hover .cta-metallic-gradient {
+    left: 100%;
+}
+
+.cta-premium:hover .cta-edge-highlight {
+    opacity: 1;
+}
+
+.cta-premium:hover .cta-reflection {
+    opacity: 0.7;
+}
+
+.cta-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(192,192,192,0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Feature Matrix - Präzise Zentrierung für Sternenfeld-Hintergrund */
+.feature-matrix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-cosmic);
+    opacity: 0;
+    animation: quantumFade 1.5s var(--ease-gravitational) 1.5s forwards;
+    /* Mathematische Horizontal-Zentrierung */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.feature-node {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(220, 220, 220, 0.3);
+    border-radius: 50%;
+    transition: all var(--duration-molecular) var(--ease-gravitational);
+    cursor: pointer;
+    position: relative;
+    /* Verbesserte Sichtbarkeit über Sternenfeld */
+    background: rgba(10, 10, 10, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    /* Präzise Kreis-Zentrierung */
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.node-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* Absolute Icon-Zentrierung */
+    position: relative;
+}
+
+.node-icon .icon-premium {
+    width: 24px;
+    height: 24px;
+    fill: rgba(220, 220, 220, 0.8);
+    transition: all var(--duration-atomic) var(--ease-quantum);
+    /* Mathematisch präzise Icon-Zentrierung */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+.feature-node:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 15px 40px rgba(192,192,192,0.2);
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.feature-node:hover .icon-premium {
+    fill: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Quantum Scroll Indicator - MATHEMATISCH PRÄZISE ZENTRIERUNG */
+.scroll-quantum-indicator {
+    position: absolute;
+    bottom: 40px;
+    /* Präzise mathematische Horizontal-Zentrierung */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: quantumFade 1.5s var(--ease-gravitational) 2s forwards;
+    /* Verbesserte Sichtbarkeit */
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
+    /* Eliminierte Margin-Interferenzen */
+    margin: 0;
+    padding: 0;
+    /* Z-Index für Sternenfeld-Überlagerung */
+    z-index: var(--z-overlay);
+}
+
+.scroll-beam {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(220, 220, 220, 0.7);
+    border-radius: 50%;
+    position: relative;
+    animation: stellarQuantumPulse 4s infinite ease-in-out;
+    /* Subtle glow für Tiefeneffekt */
+    box-shadow: 0 0 15px rgba(220, 220, 220, 0.2);
+    background: rgba(10, 10, 10, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    /* Präzise Kreis-Dimensionierung ohne Box-Model-Interferenz */
+    box-sizing: border-box;
+    margin: 0;
+    /* Absolute Zentrierung der Pfeil-Form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-beam::before {
+    content: '';
+    /* Mathematisch präzise Pfeil-Zentrierung */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid rgba(220, 220, 220, 0.8);
+    border-bottom: 1px solid rgba(220, 220, 220, 0.8);
+    /* Eliminierte Margin/Padding-Interferenzen */
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes stellarQuantumPulse {
+    0%, 100% { 
+        transform: translateY(0); 
+        opacity: 0.6;
+        box-shadow: 0 0 10px rgba(220, 220, 220, 0.1);
+    }
+    50% { 
+        transform: translateY(12px); 
+        opacity: 1;
+        box-shadow: 0 0 25px rgba(220, 220, 220, 0.3);
+    }
+}
+
+@keyframes quantumFade {
+    0% { 
+        opacity: 0; 
+        transform: translateY(30px);
+        filter: blur(2px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Bildschirmgrößen-synchronisierte Performance-Optimierungen */
+/* Korrespondiert mit JS-Parametern: 1920x1080+ = 5200+ Partikel */
+@media (min-width: 1920px) and (min-height: 1080px) {
+    .hero-canvas {
+        opacity: 0.85; /* Maximale Partikel-Sichtbarkeit für große Bildschirme */
+    }
+    
+    .insignia-content {
+        backdrop-filter: blur(0.3px);
+        -webkit-backdrop-filter: blur(0.3px);
+    }
+}
+
+/* 1600x900+ = 4600+ Partikel */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .hero-canvas {
+        opacity: 0.8;
+    }
+}
+
+/* 1280x720+ = 4000+ Partikel */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .hero-canvas {
+        opacity: 0.75;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 4rem;
+    }
+}
+
+/* 960x540+ = 3200+ Partikel */
+@media (min-width: 960px) and (max-width: 1279px) {
+    .hero-canvas {
+        opacity: 0.7;
+    }
+    
+    .insignia-content {
+        padding: var(--spacing-organic);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 3.5rem;
+        animation-duration: 18s;
+    }
+    
+    .tagline-elite {
+        font-size: 2rem;
+    }
+    
+    .feature-matrix {
+        gap: var(--spacing-organic);
+    }
+}
+
+/* Tablet-Bereich: 768px+ = ~2400-3000 Partikel */
+@media (min-width: 768px) and (max-width: 959px) {
+    .hero-canvas {
+        opacity: 0.6;
+    }
+    
+    .insignia-content {
+        padding: var(--spacing-cellular);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(1.5px);
+    }
+    
+    .logo-metallic-structure {
+        flex-direction: column;
+        gap: var(--spacing-atomic);
+    }
+    
+    .logo-divider {
+        width: 60px;
+        height: 2px;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 3rem;
+        animation-duration: 20s;
+    }
+    
+    .tagline-elite {
+        font-size: 1.8rem;
+    }
+    
+    .feature-matrix {
+        gap: var(--spacing-cellular);
+    }
+}
+
+/* Mobile-Bereich: 480px+ = ~1800-2000 Partikel */
+@media (min-width: 480px) and (max-width: 767px) {
+    .hero-canvas {
+        opacity: 0.5;
+        image-rendering: auto;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 2.2rem;
+        animation-duration: 25s;
+    }
+    
+    .tagline-elite {
+        font-size: 1.3rem;
+        letter-spacing: 0.12em;
+    }
+    
+    .tagline-premium {
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .cta-premium {
+        padding: var(--spacing-atomic) var(--spacing-cellular);
+        font-size: 0.9rem;
+    }
+    
+    .feature-matrix {
+        gap: var(--spacing-molecular);
+    }
+    
+    .feature-node {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .node-icon .icon-premium {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Sehr kleine Bildschirme: <480px = ~1200-1500 Partikel */
+@media (max-width: 479px) {
+    .hero-canvas {
+        opacity: 0.4;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.8rem;
+        animation-duration: 30s;
+    }
+    
+    .tagline-elite {
+        font-size: 1.1rem;
+    }
+    
+    .tagline-premium {
+        font-size: 0.8rem;
+    }
+    
+    .feature-node {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .node-icon .icon-premium {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Ultra-kleine Bildschirme: <380px = minimale Partikel */
+@media (max-width: 380px) {
+    .hero-canvas {
+        opacity: 0.3;
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 1.5rem;
+    }
+    
+    .tagline-elite {
+        font-size: 1rem;
+    }
+    
+    .feature-node {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .node-icon .icon-premium {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Landscape-Modus für kleine Geräte - Optimierte Partikel-Performance */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-canvas {
+        opacity: 0.6;
+    }
+    
+    .logo-quantum-container {
+        margin-bottom: var(--spacing-molecular);
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 2rem;
+        animation-duration: 15s;
+    }
+    
+    .tagline-container {
+        margin-bottom: var(--spacing-molecular);
+    }
+    
+    .tagline-elite {
+        font-size: 1.2rem;
+    }
+    
+    .cta-quantum-container {
+        margin-bottom: var(--spacing-molecular);
+    }
+    
+    .scroll-quantum-indicator {
+        display: none; /* Eliminiere Scroll-Indikator bei geringer Höhe */
+    }
+}
+
+/* Ultra-hohe Auflösungen: 4K+ - Maximale Partikel-Dichte */
+@media (min-width: 3840px) {
+    .hero-canvas {
+        opacity: 0.9; /* Maximale Sternenfeld-Intensität */
+    }
+    
+    .logo-ferrum, .logo-insignia {
+        font-size: 6rem;
+        animation-duration: 12s; /* Schnellere Animation für High-End-Hardware */
+    }
+    
+    .tagline-elite {
+        font-size: 3.5rem;
+    }
+    
+    .feature-node {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .node-icon .icon-premium {
+        width: 32px;
+        height: 32px;
+    }
+}
