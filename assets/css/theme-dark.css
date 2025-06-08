@@ -1,0 +1,136 @@
+/* theme-dark.css - Ferrum Insignia Dark Theme Variables */
+
+:root[data-theme="dark"] {
+    /* Base Colors */
+    --ferrum-void: #0a0a0a;
+    --ferrum-obsidian: #121212;
+    --ferrum-carbon: #1a1a1a;
+    --ferrum-silver: #c0c0c0;
+    --ferrum-platinum: #e5e4e2;
+    --ferrum-pearl: #f8f8f8;
+    --ferrum-gold-accent: #d4af37;
+    
+    /* Background Colors */
+    --background-primary: var(--ferrum-void);
+    --background-secondary: var(--ferrum-obsidian);
+    --background-tertiary: var(--ferrum-carbon);
+    --background-overlay: rgba(10, 10, 10, 0.95);
+    
+    /* Text Colors */
+    --text-primary: var(--ferrum-platinum);
+    --text-secondary: var(--ferrum-silver);
+    --text-tertiary: rgba(192, 192, 192, 0.7);
+    --text-inverse: var(--ferrum-void);
+    
+    /* UI Element Colors */
+    --ui-border: rgba(192, 192, 192, 0.1);
+    --ui-highlight: var(--ferrum-platinum);
+    --ui-accent: var(--ferrum-gold-accent);
+    --ui-shadow: rgba(0, 0, 0, 0.5);
+    
+    /* Form Element Colors */
+    --input-background: rgba(255, 255, 255, 0.02);
+    --input-border: rgba(192, 192, 192, 0.2);
+    --input-text: var(--ferrum-pearl);
+    --input-placeholder: rgba(192, 192, 192, 0.5);
+    
+    /* Button Colors */
+    --button-primary-bg: transparent;
+    --button-primary-text: var(--ferrum-platinum);
+    --button-primary-border: var(--ferrum-silver);
+    --button-hover-bg: rgba(192, 192, 192, 0.05);
+    --button-hover-border: var(--ferrum-platinum);
+    
+    /* Card Colors */
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --card-border: rgba(192, 192, 192, 0.1);
+    --card-hover-bg: rgba(255, 255, 255, 0.05);
+    --card-hover-border: var(--ferrum-silver);
+    
+    /* Scroll Colors */
+    --scrollbar-track: var(--ferrum-obsidian);
+    --scrollbar-thumb: var(--ferrum-silver);
+    --scrollbar-thumb-hover: var(--ferrum-platinum);
+    
+    /* Animation Colors */
+    --shine-gradient: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.05) 45%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.05) 55%,
+        rgba(255,255,255,0) 100%
+    );
+    
+    /* Overlay Effects */
+    --backdrop-filter: blur(10px);
+    --header-bg-opacity: 0.8;
+}
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] .theme-icon-dark {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-theme="dark"] .theme-icon-light {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* Card specific colors for dark theme */
+[data-theme="dark"] .silver-metallic {
+    background: linear-gradient(
+        135deg,
+        #e8e8e8 0%,
+        #b0b0b0 25%,
+        #d0d0d0 50%,
+        #a8a8a8 75%,
+        #e8e8e8 100%
+    );
+    color: var(--ferrum-carbon);
+}
+
+[data-theme="dark"] .silver-satin {
+    background: linear-gradient(
+        135deg,
+        #d8d8d8 0%,
+        #c0c0c0 50%,
+        #d8d8d8 100%
+    );
+    color: var(--ferrum-carbon);
+}
+
+[data-theme="dark"] .black-metallic {
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #0f0f0f 25%,
+        #1a1a1a 50%,
+        #050505 75%,
+        #2a2a2a 100%
+    );
+    color: var(--ferrum-platinum);
+}
+
+[data-theme="dark"] .black-satin {
+    background: linear-gradient(
+        135deg,
+        #1a1a1a 0%,
+        #0a0a0a 50%,
+        #1a1a1a 100%
+    );
+    color: var(--ferrum-platinum);
+}
+
+[data-theme="dark"] .gold-imperial {
+    background: linear-gradient(
+        135deg,
+        #f4d03f 0%,
+        #d4ac0d 25%,
+        #f1c40f 50%,
+        #b7950b 75%,
+        #f4d03f 100%
+    );
+    color: var(--ferrum-carbon);
+}
