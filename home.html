@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="CoffeeKiss - Innovative Kaffeedeckel mit echten Kaffeebohnen als Topping. Erlebe Kaffeegenuss auf einem neuen Level.">
+    <title>CoffeeKiss - Innovative Kaffeedeckel</title>
+    
+    <!-- Performance Optimization -->
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="theme-color" content="#f5f5dc">
+    
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="CoffeeKiss - Innovative Kaffeedeckel">
+    <meta property="og:description" content="Einzigartige Kaffeedeckel mit echten Kaffeebohnen als Topping.">
+    <meta property="og:image" content="assets/images/coffeekiss-share.jpg">
+    <meta property="og:url" content="https://coffeekiss.de">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            /* Coffee Theme Color Palette */
+            --color-bg-primary: #f5f5dc;
+            --color-bg-secondary: #fff8f0;
+            --color-coffee-dark: #3e2723;
+            --color-coffee-medium: #6f4e37;
+            --color-coffee-light: #a67c52;
+            --color-coffee-accent: #8b4513;
+            --color-cream: #fffdd0;
+            --color-latte: #c8ad7f;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+            --font-script: 'Dancing Script', cursive;
+            
+            /* Transitions */
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg-primary);
+            color: var(--color-coffee-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                rgba(62, 39, 35, 0.85),
+                rgba(62, 39, 35, 0.85)
+            ), url('assets/images/Navigationbarcoffee.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: var(--transition-smooth);
+        }
+        
+        .navbar.scrolled {
+            background: linear-gradient(
+                rgba(62, 39, 35, 0.95),
+                rgba(62, 39, 35, 0.95)
+            ), url('assets/images/Navigationbarcoffee.png');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-cream);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-logo:hover {
+            color: var(--color-latte);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--color-cream);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-latte);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--color-latte);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, 
+                var(--color-latte) 0%,
+                var(--color-coffee-light) 100%);
+            color: var(--color-coffee-dark);
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, 
+                var(--color-coffee-light) 0%,
+                var(--color-latte) 100%);
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-cream);
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* All Sections - Equal Height (100vh) */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Hero Section */
+        .hero {
+            overflow: hidden;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(245, 245, 220, 0.85) 0%, 
+                    rgba(255, 248, 240, 0.85) 50%,
+                    rgba(255, 253, 208, 0.85) 100%),
+                url('assets/images/Sektion1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+        }
+        
+        /* Fallback wenn Bild nicht lädt */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                var(--color-bg-primary) 0%, 
+                var(--color-bg-secondary) 50%,
+                var(--color-cream) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        
+        .hero.no-image::before {
+            opacity: 1;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-text h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--color-coffee-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, 
+                var(--color-coffee-medium) 0%,
+                var(--color-coffee-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--color-coffee-medium);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, 
+                var(--color-coffee-dark) 0%,
+                var(--color-coffee-medium) 100%);
+            color: var(--color-cream);
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(62, 39, 35, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-coffee-dark);
+            border: 2px solid var(--color-coffee-medium);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-coffee-medium);
+            color: var(--color-cream);
+            border-color: var(--color-coffee-medium);
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-showcase {
+            width: 100%;
+            max-width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle at center, 
+                rgba(111, 78, 55, 0.1) 0%,
+                transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .product-placeholder {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+            animation: productFloat 4s ease-in-out infinite;
+        }
+        
+        .product-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(62, 39, 35, 0.3));
+        }
+        
+        @keyframes productFloat {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg); 
+            }
+            25% {
+                transform: translateY(-15px) rotate(2deg);
+            }
+            50% { 
+                transform: translateY(-20px) rotate(0deg); 
+            }
+            75% {
+                transform: translateY(-15px) rotate(-2deg);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Problem Section - NEUE SEKTION */
+        .problem-section {
+            padding: var(--spacing-lg) 2rem;
+            background: linear-gradient(135deg, 
+                var(--color-coffee-dark) 0%,
+                var(--color-coffee-medium) 100%);
+            color: var(--color-cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Kaffeebohnen-Pattern Hintergrund mit realistischer S-Kurve */
+        .problem-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.12;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><g opacity="0.4" fill="none" stroke="%23cccccc" stroke-width="2.5"><ellipse cx="60" cy="50" rx="25" ry="35" transform="rotate(-15 60 50)"/><path d="M 48 35 Q 55 45 52 60 Q 50 70 60 72" stroke="%23cccccc" stroke-width="2" fill="none"/></g><g opacity="0.35" fill="none" stroke="%23cccccc" stroke-width="2.5"><ellipse cx="150" cy="140" rx="22" ry="32" transform="rotate(20 150 140)"/><path d="M 140 125 Q 145 137 143 150 Q 141 158 150 160" stroke="%23cccccc" stroke-width="2" fill="none"/></g><g opacity="0.38" fill="none" stroke="%23cccccc" stroke-width="2.5"><ellipse cx="110" cy="100" rx="28" ry="38" transform="rotate(-5 110 100)"/><path d="M 95 82 Q 103 95 100 113 Q 98 123 110 125" stroke="%23cccccc" stroke-width="2" fill="none"/></g></svg>');
+            background-size: 400px 400px;
+            background-repeat: repeat;
+            animation: slowBeanScroll 80s linear infinite;
+        }
+        
+        @keyframes slowBeanScroll {
+            0% { background-position: 0 0; }
+            100% { background-position: 400px 400px; }
+        }
+        
+        /* Großes Fragezeichen */
+        .problem-section::after {
+            content: '?';
+            position: absolute;
+            top: 50%;
+            right: -50px;
+            transform: translateY(-50%);
+            font-size: 20rem;
+            font-family: var(--font-display);
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 700;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .problem-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .problem-question {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            line-height: 1.3;
+            color: var(--color-cream);
+        }
+        
+        .problem-answer {
+            font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problem-details {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+        
+        .problem-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-smooth);
+        }
+        
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--color-latte);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-label {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.92);
+            line-height: 1.6;
+        }
+        
+        /* Vision Section */
+        .vision-section {
+            padding: var(--spacing-lg) 2rem;
+            background: var(--color-bg-primary);
+        }
+        
+        .vision-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .vision-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: var(--color-coffee-dark);
+            margin-bottom: 1.2rem;
+        }
+        
+        .vision-tagline {
+            font-family: var(--font-script);
+            font-size: 2rem;
+            color: var(--color-coffee-medium);
+            margin-bottom: 2.5rem;
+        }
+        
+        .vision-text p {
+            font-size: 1.15rem;
+            color: var(--color-coffee-medium);
+            margin-bottom: 1.8rem;
+            line-height: 1.85;
+        }
+        
+        .vision-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .vision-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            background: radial-gradient(circle at center, 
+                rgba(111, 78, 55, 0.08) 0%,
+                transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .vision-image-container img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 40px rgba(62, 39, 35, 0.25));
+            animation: productFloat 4s ease-in-out infinite;
+        }
+        
+        /* Product Section - Redesigned */
+        .product-section {
+            padding: var(--spacing-lg) 2rem;
+            background: var(--color-bg-secondary);
+        }
+        
+        .product-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .product-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            color: var(--color-coffee-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .product-tagline {
+            font-family: var(--font-script);
+            font-size: 2rem;
+            color: var(--color-coffee-medium);
+            margin-bottom: 2.5rem;
+        }
+        
+        .product-description {
+            font-size: 1.15rem;
+            color: var(--color-coffee-medium);
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+        
+        .product-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2.5rem 0;
+        }
+        
+        .product-features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-coffee-medium);
+        }
+        
+        .product-features-list li::before {
+            content: '☕';
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+        
+        .product-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            background: radial-gradient(circle at center, 
+                rgba(111, 78, 55, 0.08) 0%,
+                transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .product-image-container img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 40px rgba(62, 39, 35, 0.25));
+            animation: productFloat 4s ease-in-out infinite;
+        }
+        
+        /* Benefits Section - Accordion on Hover */
+        .benefits {
+            padding: var(--spacing-lg) 2rem;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(245, 245, 220, 0.88) 0%, 
+                    rgba(245, 245, 220, 0.90) 100%),
+                url('assets/images/map.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* Fallback wenn map.png nicht lädt */
+        .benefits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-bg-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .benefits.no-image::before {
+            opacity: 1;
+        }
+        
+        /* Section Header - für Benefits verwendet */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 700;
+            color: var(--color-coffee-dark);
+            margin-bottom: 1.2rem;
+        }
+        
+        .section-header p {
+            font-size: 1.3rem;
+            color: var(--color-coffee-medium);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .benefits-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .benefit-accordion {
+            background: var(--color-cream);
+            border-left: 5px solid var(--color-coffee-medium);
+            cursor: pointer;
+            transition: all 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(62, 39, 35, 0.08);
+            
+            /* Collapsed State - größer! */
+            height: 90px;
+        }
+        
+        .benefit-accordion:hover {
+            /* Expanded State - viel größer! */
+            height: 180px;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 12px 35px rgba(62, 39, 35, 0.18);
+            border-left-width: 7px;
+            transform: translateX(8px);
+            background: linear-gradient(135deg, 
+                var(--color-cream) 0%,
+                rgba(255, 253, 208, 0.95) 100%);
+        }
+        
+        .benefit-accordion-header {
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: padding 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .benefit-accordion:hover .benefit-accordion-header {
+            padding-bottom: 1.2rem;
+        }
+        
+        .benefit-accordion-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-coffee-medium);
+            min-width: 70px;
+            transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .benefit-accordion:hover .benefit-accordion-number {
+            color: var(--color-coffee-accent);
+            transform: scale(1.15);
+        }
+        
+        .benefit-accordion-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-coffee-dark);
+            font-weight: 600;
+            transition: color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .benefit-accordion:hover .benefit-accordion-title {
+            color: var(--color-coffee-accent);
+        }
+        
+        .benefit-accordion-content {
+            padding: 0 2.5rem 2rem 6rem;
+            opacity: 0;
+            transform: translateY(-15px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s, 
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s;
+        }
+        
+        .benefit-accordion:hover .benefit-accordion-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .benefit-accordion-content p {
+            color: var(--color-coffee-medium);
+            line-height: 1.75;
+            font-size: 1.1rem;
+        }
+        
+        /* Hover Indicator Icon */
+        .benefit-accordion::after {
+            content: '▼';
+            position: absolute;
+            right: 2.5rem;
+            top: 2rem;
+            font-size: 1.4rem;
+            color: var(--color-coffee-medium);
+            opacity: 0.5;
+            transition: all 1.0s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .benefit-accordion:hover::after {
+            opacity: 1;
+            transform: rotate(180deg);
+            color: var(--color-coffee-accent);
+        }
+        
+        /* Touch/Click Support für Mobile */
+        .benefit-accordion.active {
+            height: 180px;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 12px 35px rgba(62, 39, 35, 0.18);
+            border-left-width: 7px;
+            transform: translateX(8px);
+            background: linear-gradient(135deg, 
+                var(--color-cream) 0%,
+                rgba(255, 253, 208, 0.95) 100%);
+        }
+        
+        .benefit-accordion.active .benefit-accordion-header {
+            padding-bottom: 1.2rem;
+        }
+        
+        .benefit-accordion.active .benefit-accordion-number {
+            color: var(--color-coffee-accent);
+            transform: scale(1.15);
+        }
+        
+        .benefit-accordion.active .benefit-accordion-title {
+            color: var(--color-coffee-accent);
+        }
+        
+        .benefit-accordion.active .benefit-accordion-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .benefit-accordion.active::after {
+            opacity: 1;
+            transform: rotate(180deg);
+            color: var(--color-coffee-accent);
+        }
+        
+        /* Outro Section */
+        .outro-section {
+            padding: var(--spacing-lg) 2rem;
+            background: linear-gradient(135deg, 
+                var(--color-bg-secondary) 0%,
+                var(--color-cream) 100%);
+            text-align: center;
+        }
+        
+        .outro-content {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        
+        .outro-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            color: var(--color-coffee-dark);
+            margin-bottom: 1.8rem;
+            line-height: 1.2;
+        }
+        
+        .outro-content .tagline {
+            font-family: var(--font-script);
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            color: var(--color-coffee-medium);
+            margin-bottom: 2.5rem;
+        }
+        
+        .outro-content p {
+            font-size: 1.35rem;
+            color: var(--color-coffee-medium);
+            margin-bottom: 2rem;
+            line-height: 1.85;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(
+                rgba(62, 39, 35, 0.95),
+                rgba(62, 39, 35, 0.95)
+            ), url('assets/images/Navigationbarcoffee.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: var(--color-cream);
+            padding: 3rem 2rem 1rem;
+            position: relative;
+        }
+        
+        /* Fallback falls Bild nicht lädt */
+        .footer.no-image {
+            background: var(--color-coffee-dark);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: var(--transition-smooth);
+        }
+        
+        .footer-section a:hover {
+            color: var(--color-cream);
+            padding-left: 5px;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+        
+        .social-link:hover {
+            background: var(--color-coffee-medium);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-coffee-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 5s ease-out;
+            pointer-events: none;
+        }
+        
+        .page-loader.hidden {
+            opacity: 0;
+        }
+        
+        .page-loader.fully-hidden {
+            display: none;
+        }
+        
+        .loader-logo {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-cream);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInOutLogo 3.5s ease-in-out forwards;
+            text-shadow: 0 0 30px rgba(255, 253, 208, 0.4);
+        }
+        
+        @keyframes fadeInOutLogo {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            20% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            85% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-10px) scale(1.05);
+            }
+        }
+        
+        .loader-beans {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .loader-bean {
+            width: 24px;
+            height: 30px;
+            background: linear-gradient(135deg, 
+                var(--color-coffee-light) 0%,
+                var(--color-coffee-medium) 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            animation: beanBounce 1.4s ease-in-out infinite;
+            box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+                        2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .loader-bean::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 60%;
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(0, 0, 0, 0.5) 20%,
+                rgba(0, 0, 0, 0.5) 80%,
+                transparent 100%);
+            border-radius: 2px;
+        }
+        
+        .loader-bean::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            width: 40%;
+            height: 30%;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.3) 0%,
+                transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .loader-bean:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loader-bean:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes beanBounce {
+            0%, 80%, 100% {
+                transform: scale(1) translateY(0) rotate(0deg);
+                opacity: 0.9;
+            }
+            40% {
+                transform: scale(1.2) translateY(-20px) rotate(10deg);
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content,
+            .vision-content,
+            .product-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .product-showcase {
+                max-width: 700px;
+                height: 700px;
+            }
+            
+            .product-placeholder {
+                width: 500px;
+                height: 500px;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: linear-gradient(
+                    rgba(62, 39, 35, 0.95),
+                    rgba(62, 39, 35, 0.95)
+                ), url('assets/images/Navigationbarcoffee.png');
+                background-size: cover;
+                background-position: center;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                transition: left 0.3s ease;
+            }
+            
+            .nav-menu .nav-link {
+                font-size: 1.3rem;
+                padding: 1rem 0;
+            }
+            
+            .nav-menu .nav-cta {
+                margin-top: 1rem;
+                display: inline-block;
+                width: auto;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 5rem 1rem 3rem;
+            }
+            
+            .product-grid,
+            .problem-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            /* Accordion responsive adjustments */
+            .benefit-accordion {
+                height: 95px;
+            }
+            
+            .benefit-accordion:hover,
+            .benefit-accordion.active {
+                height: 220px;
+            }
+            
+            .benefit-accordion-header {
+                padding: 1.5rem;
+            }
+            
+            .benefit-accordion-content {
+                padding: 0 1.5rem 1.5rem 4rem;
+            }
+            
+            .benefit-accordion-number {
+                font-size: 1.8rem;
+                min-width: 50px;
+            }
+            
+            .benefit-accordion-title {
+                font-size: 1.3rem;
+            }
+            
+            .benefit-accordion::after {
+                right: 1.5rem;
+                top: 1.5rem;
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+            /* Optional: Scroll-Snap für perfektes Section-Alignment */
+            /* scroll-snap-type: y mandatory; */
+        }
+        
+        /* Optional: Scroll-Snap-Points für jede Section */
+        /* section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        } */
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">CoffeeKiss</div>
+        <div class="loader-beans">
+            <div class="loader-bean"></div>
+            <div class="loader-bean"></div>
+            <div class="loader-bean"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">CoffeeKiss</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#problem" class="nav-link">Das Problem</a></li>
+                <li><a href="#vision" class="nav-link">Vision</a></li>
+                <li><a href="#product" class="nav-link">Produkt</a></li>
+                <li><a href="#benefits" class="nav-link">Vorteile</a></li>
+                <li><a href="#contact" class="nav-cta">Kontakt</a></li>
+            </ul>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <div class="hero-text">
+                <h1>
+                    Kaffee-Erlebnis<br>
+                    <span class="highlight">neu definiert</span>
+                </h1>
+                <p>
+                    CoffeeKiss revolutioniert den To-Go-Kaffeegenuss mit innovativen 
+                    Kaffeedeckeln, die echte Kaffeebohnen als exquisites Topping vereinen. 
+                    Wo Funktionalität auf Genuss trifft.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#problem" class="btn btn-primary">Mehr erfahren</a>
+                    <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="product-showcase">
+                    <div class="product-placeholder">
+                        <img src="assets/images/Lid2.png" alt="CoffeeKiss Kaffeedeckel mit Kaffeebohnen-Topping">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section - NEU -->
+    <section class="problem-section" id="problem">
+        <div class="problem-content scroll-reveal">
+            <h2 class="problem-question">
+                Warum riecht der Kaffee nie nach aromatischen Kaffeebohnen?
+            </h2>
+            
+            <p class="problem-answer">
+                Die ernüchternde Wahrheit: <strong>Über 70% der wertvollen Aromastoffe</strong> 
+                gehen bereits beim Brühvorgang verloren. Was bleibt, wird durch ungünstige 
+                Lagerbedingungen, Oxidation und Temperaturverlust weiter beeinträchtigt.
+            </p>
+            
+            <p class="problem-details">
+                Während der Barista mit höchster Präzision arbeitet und die perfekte Extraktion 
+                anstrebt, entweicht das Aroma unaufhaltsam in die Luft. Sobald der Deckel 
+                aufgesetzt wird, ist der charakteristische Duft frisch gerösteter Bohnen 
+                bereits Geschichte. Der Kaffee, den Sie trinken, ist nur ein schwacher Schatten 
+                seines wahren Potenzials – ein kompromittiertes Erlebnis, das der ursprünglichen 
+                Bohnenqualität nicht gerecht wird.
+            </p>
+            
+            <div class="problem-stats">
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Aromaverlust beim Brühen durch Verflüchtigung</div>
+                </div>
+                
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">15 Min</div>
+                    <div class="stat-label">Bis zum maximalen Aromaverlust im To-Go-Becher</div>
+                </div>
+                
+                <div class="stat-card scroll-reveal">
+                    <div class="stat-number">0%</div>
+                    <div class="stat-label">Echtes Bohnen-Aroma erreicht Ihre Nase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vision Section -->
+    <section class="vision-section" id="vision">
+        <div class="vision-content">
+            <div class="vision-text scroll-reveal">
+                <h2>Unsere Vision</h2>
+                <p class="vision-tagline">Das verlorene Aroma zurückbringen</p>
+                
+                <p>
+                    Bei CoffeeKiss glauben wir, dass jeder Moment mit Kaffee ein 
+                    vollständiges sensorisches Erlebnis sein sollte. Der Duft ist 
+                    mindestens genauso wichtig wie der Geschmack – doch genau hier 
+                    versagen herkömmliche To-Go-Lösungen. Deshalb haben wir eine 
+                    revolutionäre Idee verwirklicht: <strong>Echte, frisch geröstete 
+                    Kaffeebohnen direkt auf Ihrem Deckel</strong>.
+                </p>
+                
+                <p>
+                    Während Sie Ihren Kaffee genießen, begleitet Sie der intensive, 
+                    authentische Duft hochwertiger Arabica-Bohnen. Mit jedem Schluck 
+                    atmen Sie das ein, was eigentlich zum Kaffeeerlebnis gehört: den 
+                    unverfälschten Duft frischer Röstung. Optional können Sie die 
+                    knackige Bohne direkt vom Deckel naschen – für den perfekten 
+                    Crunch und einen zusätzlichen natürlichen Energie-Boost.
+                </p>
+                
+                <p>
+                    Unsere Mission ist kristallklar: <strong>Den Kaffeegenuss komplettieren.</strong> 
+                    Von der ersten Berührung mit dem Deckel bis zum letzten Tropfen 
+                    soll Ihr Kaffee-Erlebnis so sein, wie die Natur es vorgesehen hat 
+                    – aromatisch, intensiv, unvergesslich. CoffeeKiss ist mehr als 
+                    Innovation; es ist die Rückkehr zum authentischen Kaffeegenuss.
+                </p>
+            </div>
+            
+            <div class="vision-image scroll-reveal">
+                <div class="vision-image-container">
+                    <img src="assets/images/Lid3.png" alt="CoffeeKiss Deckel mit echten Kaffeebohnen">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Section -->
+    <section class="product-section" id="product">
+        <div class="product-content">
+            <div class="product-text scroll-reveal">
+                <h2>Unser Produkt</h2>
+                <p class="product-tagline">Innovation trifft auf Perfektion</p>
+                
+                <p class="product-description">
+                    Der CoffeeKiss Deckel ist mehr als nur ein Verschluss – er ist das 
+                    fehlende Puzzleteil für den perfekten Kaffeegenuss. Durch die 
+                    Integration einer echten Kaffeebohne direkt im Deckel revolutionieren 
+                    wir das To-Go-Erlebnis grundlegend.
+                </p>
+                
+                <p class="product-description">
+                    Jeder Deckel wird mit höchster Präzision gefertigt und mit einer 
+                    handverlesenen Arabica-Bohne bestückt. Das innovative Netzfenster-Design 
+                    schützt die Bohne, während sie kontinuierlich ihr Aroma an Ihren Kaffee 
+                    abgibt – für ein authentisches Dufterlebnis von Anfang bis Ende.
+                </p>
+                
+                <ul class="product-features-list">
+                    <li><strong>Premium-Materialien:</strong> Biologisch abbaubar und zu 100% kompostierbar</li>
+                    <li><strong>Perfekte Passform:</strong> Kompatibel mit allen gängigen To-Go-Bechern</li>
+                    <li><strong>Hygienisch versiegelt:</strong> Einzeln verpackt für maximale Frische</li>
+                    <li><strong>Essbare Bohne:</strong> Zusätzlicher Energie-Boost durch natürliches Koffein</li>
+                    <li><strong>Fair Trade:</strong> Ausschließlich zertifizierte Bohnen aus nachhaltigem Anbau</li>
+                </ul>
+            </div>
+            
+            <div class="product-image scroll-reveal">
+                <div class="product-image-container">
+                    <img src="assets/images/Lid.png" alt="CoffeeKiss Deckel - Innovatives Design mit Kaffeebohne">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="benefits-container">
+            <div class="section-header scroll-reveal">
+                <h2>Warum CoffeeKiss?</h2>
+                <p>Die Vorteile auf einen Blick</p>
+            </div>
+            
+            <div class="benefits-list">
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">01</div>
+                        <h3 class="benefit-accordion-title">Authentisches Aroma</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Erleben Sie den wahren Duft frisch gerösteter Kaffeebohnen – 
+                            nicht nur im Café, sondern überall. Jeder Schluck wird von 
+                            einem intensiven Aroma-Erlebnis begleitet.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">02</div>
+                        <h3 class="benefit-accordion-title">Geschmacks-Revolution</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Die Kombination aus cremigem Kaffee und knackiger Bohne 
+                            schafft eine einzigartige Textur. Ihr Gaumen wird die 
+                            Komplexität lieben.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">03</div>
+                        <h3 class="benefit-accordion-title">Umweltfreundlich</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Reduzieren Sie aktiv Ihren ökologischen Fußabdruck. Unsere 
+                            Deckel sind vollständig kompostierbar und aus nachwachsenden 
+                            Rohstoffen gefertigt.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">04</div>
+                        <h3 class="benefit-accordion-title">Gesundheitsplus</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Kaffeebohnen sind reich an Antioxidantien und liefern 
+                            natürliches Koffein in seiner reinsten Form. Energie ohne 
+                            Kompromisse.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">05</div>
+                        <h3 class="benefit-accordion-title">Premium-Erlebnis</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Verwandeln Sie jeden Kaffee-Moment in ein Event. CoffeeKiss 
+                            ist mehr als ein Produkt – es ist ein Statement für 
+                            Qualitätsbewusstsein.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-accordion scroll-reveal">
+                    <div class="benefit-accordion-header">
+                        <div class="benefit-accordion-number">06</div>
+                        <h3 class="benefit-accordion-title">Gesprächsstarter</h3>
+                    </div>
+                    <div class="benefit-accordion-content">
+                        <p>
+                            Die innovative Präsentation zieht Blicke auf sich. Seien Sie 
+                            Trendsetter und inspirieren Sie andere, Kaffee neu zu denken.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Outro Section -->
+    <section class="outro-section" id="contact">
+        <div class="outro-content scroll-reveal">
+            <h2>Bereit für die Kaffee-Revolution?</h2>
+            <p class="tagline">Wo Aroma auf Innovation trifft</p>
+            
+            <p>
+                CoffeeKiss ist mehr als nur ein Kaffeedeckel – es ist eine Bewegung. 
+                Eine Bewegung, die Kaffeegenuss zurück zu seinen aromatischen Wurzeln 
+                bringt und den Standard für To-Go-Kaffee neu definiert. Wir glauben 
+                daran, dass Kompromisse der Vergangenheit angehören sollten.
+            </p>
+            
+            <p>
+                Jeden Tag trinken Millionen Menschen Kaffee, der sein volles Potenzial 
+                nie entfaltet. Mit CoffeeKiss ändern wir das – eine Tasse nach der anderen. 
+                Werden Sie Teil dieser Revolution und erleben Sie Kaffee, wie er sein sollte: 
+                <strong>Intensiv. Aromatisch. Unvergesslich. Kompromisslos.</strong>
+            </p>
+            
+            <p style="font-style: italic; color: var(--color-coffee-medium); margin-top: 2rem;">
+                Die Zukunft des Kaffeegenusses beginnt mit einem einfachen Deckel. 
+                Ihre Zukunft beginnt jetzt.
+            </p>
+            
+            <div class="hero-buttons" style="justify-content: center; margin-top: 3rem;">
+                <a href="mailto:info@coffeekiss.de" class="btn btn-primary">
+                    Jetzt Kontakt aufnehmen
+                </a>
+                <a href="#home" class="btn btn-secondary">
+                    Zurück nach oben
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">CoffeeKiss</div>
+                <p>
+                    Innovative Kaffeedeckel mit Bohnen-Topping.<br>
+                    Wo Genuss auf Design trifft.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🦅</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Produkt</h3>
+                <a href="#problem">Das Problem</a>
+                <a href="#vision">Unsere Vision</a>
+                <a href="#product">Unser Produkt</a>
+                <a href="#benefits">Vorteile</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Unternehmen</h3>
+                <a href="#">Über uns</a>
+                <a href="#">Nachhaltigkeit</a>
+                <a href="#">Karriere</a>
+                <a href="#">Presse</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>E-Mail: info@coffeekiss.de</p>
+                <p>Tel: +49 (0) 123 456789</p>
+                <p>CoffeeKiss GmbH<br>Musterstraße 123<br>12345 Musterstadt</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CoffeeKiss. Alle Rechte vorbehalten. | 
+               <a href="#" style="color: inherit;">Datenschutz</a> | 
+               <a href="#" style="color: inherit;">Impressum</a> | 
+               <a href="#" style="color: inherit;">AGB</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                
+                setTimeout(() => {
+                    loader.classList.add('fully-hidden');
+                }, 5100);
+                
+            }, 1500);
+        });
+        
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 100;
+            
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('revealed');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+        
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add entrance animation to hero on load
+        window.addEventListener('load', () => {
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.opacity = '1';
+            }
+        });
+        
+        // Accordion Touch/Click Support for Mobile
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.benefit-accordion');
+            
+            // Detect if device is touch-enabled
+            const isTouchDevice = ('ontouchstart' in window) || 
+                                 (navigator.maxTouchPoints > 0) || 
+                                 (navigator.msMaxTouchPoints > 0);
+            
+            if (isTouchDevice) {
+                accordions.forEach(accordion => {
+                    accordion.addEventListener('click', function() {
+                        // Toggle active class
+                        const isActive = this.classList.contains('active');
+                        
+                        // Close all other accordions
+                        accordions.forEach(acc => acc.classList.remove('active'));
+                        
+                        // Toggle current accordion
+                        if (!isActive) {
+                            this.classList.add('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

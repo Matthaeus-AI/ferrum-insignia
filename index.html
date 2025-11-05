@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="description" content="CoffeeKiss - Innovative Kaffeedeckel mit Kaffeebohnen-Topping. Wo Genuss auf Design trifft.">
+    <title>CoffeeKiss - Kaffee neu erleben</title>
+    
+    <!-- Performance-Critical GPU Acceleration Meta-Tags -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#f5f5dc">
+    <meta name="msapplication-navbutton-color" content="#f5f5dc">
+    
+    <!-- Hardware Acceleration Hints -->
+    <meta name="apple-mobile-web-app-title" content="CoffeeKiss">
+    <meta name="application-name" content="CoffeeKiss">
+    <meta name="msapplication-TileColor" content="#6f4e37">
+    <meta name="msapplication-config" content="none">
+    
+    <!-- Font Imports - Premium Typography with Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Metadata for Social Sharing -->
+    <meta property="og:title" content="CoffeeKiss - Innovative Kaffeedeckel">
+    <meta property="og:description" content="Einzigartige Kaffeedeckel mit echten Kaffeebohnen als Topping. Erlebe Kaffeegenuss neu.">
+    <meta property="og:image" content="assets/images/coffeekiss-share.jpg">
+    <meta property="og:url" content="https://coffeekiss.de">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CoffeeKiss - Innovative Kaffeedeckel">
+    <meta name="twitter:description" content="Einzigartige Kaffeedeckel mit echten Kaffeebohnen als Topping.">
+    <meta name="twitter:image" content="assets/images/coffeekiss-share.jpg">
+    
+    <!-- Critical Performance-Optimizations with Mathematical Precision Animation-Parameters -->
+    <style>
+        :root {
+            /* Coffee Theme Color Palette */
+            --color-bg-primary: #f5f5dc;           /* Beige/Creme */
+            --color-bg-secondary: #fff8f0;         /* Helles Creme */
+            --color-coffee-dark: #3e2723;          /* Dunkelbraun (Text) */
+            --color-coffee-medium: #6f4e37;        /* Mittelbraun */
+            --color-coffee-light: #a67c52;         /* Hellbraun */
+            --color-coffee-accent: #8b4513;        /* Saddle Brown */
+            --color-cream: #fffdd0;                /* Cream */
+            --color-latte: #c8ad7f;                /* Latte */
+            
+            /* Viewport Height Compensation with Mathematical Precision */
+            --vh: 1vh;
+            --actual-vh: 1vh;
+            --viewport-width: 100vw;
+            --viewport-height: 100vh;
+            
+            /* Mathematical Animation-State-Machine Constants */
+            --animation-state: normal;
+            --departure-phase: 0;
+            --bean-velocity-multiplier: 1.0;
+            --text-dissolution-progress: 0.0;
+            
+            /* Enhanced Coffee Bean System Performance-Parameter */
+            --bean-field-density: 1.0;
+            --bean-field-opacity: 0.95;
+            --rendering-precision: ultra-high;
+            --bean-count-coefficient: 80;          /* Weniger als Sterne, da grÃƒÂ¶ÃƒÅ¸er */
+            
+            /* Coffee Bean Rotation Parameters */
+            --bean-rotation-speed-base: 0.15;      /* Sehr langsame Eigenrotation */
+            --bean-rotation-speed-hover: 0.4;      /* Moderate Rotation bei Hover */
+            --bean-rotation-speed-departure: 1.5;  /* Schnellere Rotation bei Departure */
+            
+            /* Exponential Velocity-Algorithm Constants synchronized with JavaScript */
+            --bean-velocity-base: 0.15;            /* Langsamer als Sterne */
+            --bean-velocity-hover: 1.8;
+            --bean-velocity-departure: 7.5;
+            --departure-exponent: 2.4;
+            --departure-duration: 1400;
+            
+            /* Coffee Bean Size Parameters */
+            --bean-size-min: 18;                   /* Minimum Bean Size in px (12 × 1.5) */
+            --bean-size-max: 48;                   /* Maximum Bean Size in px (32 × 1.5) */
+            --bean-size-variation: 1.0;            /* Size variation factor */
+            
+            /* Cross-Device-Normalization-Matrix */
+            --logo-symmetry-factor: 1.0;
+            --responsive-scaling-factor: 1.0;
+            --character-width-compensation: 0;
+            
+            /* Hardware-Acceleration-Optimization-Coefficients */
+            --gpu-layer-promotion: enabled;
+            --transform-3d-acceleration: translate3d(0, 0, 0);
+            --perspective-optimization: 1000px;
+            --backface-culling: hidden;
+        }
+        
+        /* Viewport-Area-Based Performance-Scaling with Mathematical Density-Classification */
+        
+        /* Ultra-High-Resolution: 4K+ Displays */
+        @media (min-width: 3840px) and (min-height: 2160px) {
+            :root {
+                --bean-field-density: 1.4;
+                --bean-count-coefficient: 120;
+                --bean-size-max: 60;
+                --responsive-scaling-factor: 1.1;
+            }
+        }
+        
+        /* High-Resolution: 1920x1080+ */
+        @media (min-width: 1920px) and (min-height: 1080px) and (max-width: 3839px) {
+            :root {
+                --bean-field-density: 1.2;
+                --bean-count-coefficient: 90;
+                --bean-size-max: 54;
+                --responsive-scaling-factor: 1.05;
+            }
+        }
+        
+        /* Standard-Resolution: 1600x900 - 1919x1079 */
+        @media (min-width: 1600px) and (min-height: 900px) and (max-width: 1919px) {
+            :root {
+                --bean-field-density: 1.1;
+                --bean-count-coefficient: 80;
+                --bean-size-max: 32;
+            }
+        }
+        
+        /* Mid-Resolution: 1280x720 - 1599x899 */
+        @media (min-width: 1280px) and (min-height: 720px) and (max-width: 1599px) {
+            :root {
+                --bean-field-density: 1.0;
+                --bean-count-coefficient: 70;
+                --bean-size-max: 42;
+            }
+        }
+        
+        /* Tablet-Resolution: 768x1024 or 1024x768 */
+        @media (min-width: 768px) and (max-width: 1279px) {
+            :root {
+                --bean-field-density: 0.85;
+                --bean-count-coefficient: 55;
+                --bean-size-max: 39;
+                --responsive-scaling-factor: 0.95;
+            }
+        }
+        
+        /* Mobile-Resolution: 480x800 or similar */
+        @media (min-width: 480px) and (max-width: 767px) {
+            :root {
+                --bean-field-density: 0.7;
+                --bean-count-coefficient: 40;
+                --bean-size-max: 33;
+                --bean-size-min: 15;
+                --responsive-scaling-factor: 0.9;
+            }
+        }
+        
+        /* Small-Mobile-Resolution: <480px */
+        @media (max-width: 479px) {
+            :root {
+                --bean-field-density: 0.6;
+                --bean-count-coefficient: 30;
+                --bean-size-max: 30;
+                --bean-size-min: 12;
+                --responsive-scaling-factor: 0.85;
+            }
+        }
+        
+        /* Mathematical Landscape-Mode-Optimization for Mobile-Devices */
+        @media (max-height: 500px) and (orientation: landscape) {
+            :root {
+                --bean-field-density: calc(var(--bean-field-density) * 0.75);
+                --bean-count-coefficient: calc(var(--bean-count-coefficient) * 0.7);
+                --responsive-scaling-factor: 0.9;
+            }
+        }
+        
+        /* Base Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--color-bg-primary);
+            color: var(--color-coffee-dark);
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        
+        /* Critical Performance-Optimizations for Canvas-Hardware-Acceleration */
+        #coffeeBeanSystem {
+            /* GPU-Layer-Promotion with Mathematical Transform-Matrix */
+            will-change: transform, opacity, filter;
+            transform: var(--transform-3d-acceleration);
+            backface-visibility: var(--backface-culling);
+            
+            /* Optimized Rendering-Pipeline */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            image-rendering: optimizeQuality;
+            
+            /* Enhanced 3D-Transform-Space */
+            transform-style: preserve-3d;
+            perspective: var(--perspective-optimization);
+            
+            /* Precision Canvas-Positioning */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            z-index: 1;
+            
+            /* Pixel-Perfect Anti-Aliasing */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
+            /* Fade in animation */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out 0.5s forwards;
+        }
+        
+        /* Viewport Height Compensation */
+        .quantum-container {
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            height: 100dvh;
+            min-height: -webkit-fill-available;
+            width: var(--viewport-width);
+            
+            background: linear-gradient(135deg, 
+                var(--color-bg-primary) 0%, 
+                var(--color-bg-secondary) 50%, 
+                var(--color-cream) 100%);
+            
+            contain: layout style paint size;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Main Content Container */
+        .coffee-content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* Logo Container */
+        .logo-coffee-container {
+            margin-bottom: 3rem;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .logo-coffee-structure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* CoffeeKiss Logo */
+        .logo-coffeekiss {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--color-coffee-dark);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            
+            /* Coffee Gradient Effect */
+            background: linear-gradient(135deg, 
+                var(--color-coffee-dark) 0%,
+                var(--color-coffee-medium) 50%,
+                var(--color-coffee-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            
+            /* Subtle Animation */
+            animation: coffeeShimmer 4s ease-in-out infinite, 
+                       fadeInUp 1s ease-out 0.3s backwards;
+            
+            /* Text Shadow for Depth */
+            filter: drop-shadow(2px 2px 4px rgba(62, 39, 35, 0.15));
+            
+            /* Transform origin for smooth scaling */
+            transform-origin: center;
+        }
+        
+        @keyframes coffeeShimmer {
+            0%, 100% {
+                filter: drop-shadow(2px 2px 4px rgba(62, 39, 35, 0.15)) brightness(1);
+            }
+            50% {
+                filter: drop-shadow(2px 2px 6px rgba(62, 39, 35, 0.25)) brightness(1.1);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes drawLine {
+            from {
+                width: 0;
+            }
+            to {
+                width: 120px;
+            }
+        }
+        
+        /* Tagline */
+        .logo-tagline {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--color-coffee-medium);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+        
+        /* Content Matrix */
+        .content-matrix {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            animation: fadeIn 1s ease-out 0.9s backwards;
+        }
+        
+        /* Primary Statement */
+        .primary-statement {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: var(--color-coffee-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            animation: fadeInUp 1s ease-out 1.2s backwards;
+        }
+        
+        /* Statement Separator */
+        .statement-separator {
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%,
+                var(--color-coffee-medium) 50%,
+                transparent 100%);
+            margin: 2rem auto;
+            border-radius: 2px;
+            animation: drawLine 1s ease-out 1.5s forwards;
+        }
+        
+        /* Secondary Statement */
+        .secondary-statement {
+            font-family: 'Lato', sans-serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            color: var(--color-coffee-medium);
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            animation: fadeInUp 1s ease-out 1.8s backwards;
+        }
+        
+        /* CTA Container */
+        .cta-coffee-container {
+            position: relative;
+            z-index: 15;
+            animation: scaleIn 1s ease-out 2.1s backwards;
+        }
+        
+        /* CTA Button */
+        .cta-premium {
+            font-family: 'Lato', sans-serif;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            
+            color: var(--color-bg-primary);
+            background: linear-gradient(135deg, 
+                var(--color-coffee-dark) 0%,
+                var(--color-coffee-medium) 50%,
+                var(--color-coffee-accent) 100%);
+            
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            
+            position: relative;
+            overflow: hidden;
+            
+            /* Shadows for Depth */
+            box-shadow: 
+                0 4px 15px rgba(62, 39, 35, 0.2),
+                0 2px 8px rgba(62, 39, 35, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            
+            /* Transitions */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Hardware Acceleration */
+            transform: translateZ(0);
+            will-change: transform, box-shadow;
+            
+            /* Subtle pulse animation */
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .cta-premium:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 8px 25px rgba(62, 39, 35, 0.3),
+                0 4px 12px rgba(62, 39, 35, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            animation: none; /* Stop pulse on hover */
+        }
+        
+        .cta-premium:active {
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 
+                0 4px 15px rgba(62, 39, 35, 0.25),
+                0 2px 8px rgba(62, 39, 35, 0.18);
+        }
+        
+        .cta-text {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* CTA Effect Layers */
+        .cta-metallic-gradient,
+        .cta-edge-highlight,
+        .cta-reflection {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .cta-metallic-gradient {
+            background: linear-gradient(90deg, 
+                transparent 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 100%);
+            transform: translateX(-100%);
+        }
+        
+        .cta-premium:hover .cta-metallic-gradient {
+            opacity: 1;
+            animation: sweep 1.5s ease infinite;
+        }
+        
+        @keyframes sweep {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(200%);
+            }
+        }
+        
+        /* Transition Effect */
+        .loader-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-coffee-dark);
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+        
+        .loader-transition.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                var(--color-bg-primary) 0%, 
+                var(--color-bg-secondary) 100%);
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        .loading-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, 
+                var(--color-coffee-dark) 0%,
+                var(--color-coffee-medium) 50%,
+                var(--color-coffee-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .loading-beans {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .loading-bean {
+            width: 24px;
+            height: 30px;
+            background: linear-gradient(135deg, 
+                var(--color-coffee-medium) 0%,
+                var(--color-coffee-dark) 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            animation: beanBounce 1.4s ease-in-out infinite;
+            box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+                        2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Kaffeebohnen-Linie in der Mitte */
+        .loading-bean::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 60%;
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(0, 0, 0, 0.4) 20%,
+                rgba(0, 0, 0, 0.4) 80%,
+                transparent 100%);
+            border-radius: 2px;
+        }
+        
+        /* Highlight auf der Bohne */
+        .loading-bean::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            width: 40%;
+            height: 30%;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.2) 0%,
+                transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .loading-bean:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-bean:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes beanBounce {
+            0%, 80%, 100% {
+                transform: scale(1) translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            40% {
+                transform: scale(1.2) translateY(-20px) rotate(10deg);
+                opacity: 1;
+            }
+        }
+        
+        /* Ultra-Low-Motion Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            #coffeeBeanSystem {
+                animation: none !important;
+                transform: none !important;
+                opacity: 0.3 !important;
+            }
+            
+            .logo-coffeekiss {
+                animation: none !important;
+            }
+            
+            .cta-premium {
+                transition: none !important;
+            }
+            
+            :root {
+                --bean-velocity-base: 0;
+                --bean-velocity-hover: 0;
+                --bean-velocity-departure: 0;
+                --bean-rotation-speed-base: 0;
+                --animation-state: reduced-motion;
+            }
+        }
+        
+        /* iOS Safari Viewport Bug Compensation */
+        @supports (-webkit-touch-callout: none) {
+            .quantum-container {
+                height: -webkit-fill-available;
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        /* High-DPI Display Optimization */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            #coffeeBeanSystem {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">CoffeeKiss</div>
+        <div class="loading-beans">
+            <div class="loading-bean"></div>
+            <div class="loading-bean"></div>
+            <div class="loading-bean"></div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Quantum Container with Coffee Bean Animation System -->
+    <div class="quantum-container" 
+         role="main" 
+         aria-label="CoffeeKiss Landing Page"
+         data-animation-state="normal"
+         data-departure-phase="0"
+         data-performance-mode="adaptive"
+         data-viewport-class="calculating"
+         data-bean-density="adaptive"
+         data-text-dissolution="inactive"
+         data-bean-velocity="normal"
+         data-gpu-acceleration="enabled">
+        
+        <!-- Enhanced Coffee Bean System Canvas -->
+        <canvas 
+            id="coffeeBeanSystem" 
+            class="hero-canvas"
+            role="img"
+            aria-label="Animated coffee beans floating in background"
+            data-bean-density="adaptive"
+            data-bean-count="calculating"
+            data-rendering-precision="auto-detect"
+            data-performance-monitoring="enabled"
+            data-animation-state="normal"
+            data-velocity-multiplier="1.0"
+            data-rotation-enabled="true"
+            data-bean-classification="arabica-spectrum"
+            data-hardware-acceleration="enabled"
+            data-image-preload="required"
+            width="1920"
+            height="1080"
+        ></canvas>
+        
+        <!-- Main Content -->
+        <main class="coffee-content" 
+              role="main"
+              aria-live="polite"
+              data-content-state="visible"
+              data-dissolution-phase="none">
+            
+            <!-- Logo Architecture -->
+            <div class="logo-coffee-container" 
+                 role="banner"
+                 aria-label="CoffeeKiss Logo">
+                <div class="logo-coffee-structure">
+                    <div class="logo-coffeekiss" 
+                         data-i18n="logo.coffeekiss" 
+                         role="text"
+                         aria-label="CoffeeKiss - Firmenname">CoffeeKiss</div>
+                    
+                    <div class="logo-tagline" 
+                         role="text"
+                         aria-label="Kaffee-Genuss neu definiert">Kaffee-Genuss neu definiert</div>
+                </div>
+            </div>
+            
+            <!-- Content Matrix -->
+            <div class="content-matrix" 
+                 role="region"
+                 aria-labelledby="primary-statement">
+                
+                <h1 id="primary-statement" 
+                    class="primary-statement" 
+                    data-i18n="statement.primary"
+                    role="heading"
+                    aria-level="1">Innovative Kaffeedeckel mit Bohnen-Topping</h1>
+                
+                <div class="statement-separator" 
+                     role="separator"
+                     aria-hidden="true"></div>
+                
+                <p class="secondary-statement" 
+                   data-i18n="statement.secondary"
+                   role="text">Wo exquisiter Geschmack auf innovatives Design trifft</p>
+            </div>
+            
+            <!-- CTA Container -->
+            <div class="cta-coffee-container" 
+                 role="region"
+                 aria-label="Navigation Controls">
+                
+                <button 
+                    class="cta-premium" 
+                    id="enterButton" 
+                    type="button"
+                    aria-label="Entdecken Sie CoffeeKiss - Navigiert zur Hauptseite"
+                    data-navigation="home.html"
+                    data-animation-trigger="departure"
+                    data-interaction-state="ready"
+                    role="button"
+                    tabindex="0"
+                >
+                    <span class="cta-text" 
+                          data-i18n="cta.enter"
+                          role="text">Entdecken</span>
+                    
+                    <div class="cta-metallic-gradient" 
+                         aria-hidden="true"></div>
+                    
+                    <div class="cta-edge-highlight" 
+                         aria-hidden="true"></div>
+                    
+                    <div class="cta-reflection" 
+                         aria-hidden="true"></div>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Transition Effect Container -->
+    <div class="loader-transition" 
+         aria-hidden="true"
+         data-transition-state="inactive"
+         role="presentation"></div>
+    
+    <!-- Performance Configuration Script -->
+    <script>
+        // Enhanced Viewport Height Compensation
+        (function setupViewportCompensation() {
+            function updateViewportHeight() {
+                const vh = window.innerHeight * 0.01;
+                const vw = window.innerWidth * 0.01;
+                
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+                document.documentElement.style.setProperty('--actual-vh', `${vh}px`);
+                document.documentElement.style.setProperty('--viewport-width', `${window.innerWidth}px`);
+                document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+                
+                // Mathematical Viewport-Area-Classification
+                const viewportArea = window.innerWidth * window.innerHeight;
+                let areaClassification;
+                
+                if (viewportArea >= 8294400) areaClassification = 'ultra-high-4k';
+                else if (viewportArea >= 2073600) areaClassification = 'high-fullhd';
+                else if (viewportArea >= 1440000) areaClassification = 'standard-hd';
+                else if (viewportArea >= 921600) areaClassification = 'medium-hd';
+                else if (viewportArea >= 518400) areaClassification = 'tablet';
+                else if (viewportArea >= 307200) areaClassification = 'mobile-large';
+                else areaClassification = 'mobile-small';
+                
+                const container = document.querySelector('.quantum-container');
+                if (container) {
+                    container.setAttribute('data-viewport-class', areaClassification);
+                    container.setAttribute('data-viewport-area', viewportArea);
+                    container.setAttribute('data-viewport-width', window.innerWidth);
+                    container.setAttribute('data-viewport-height', window.innerHeight);
+                }
+            }
+            
+            updateViewportHeight();
+            
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(updateViewportHeight, 100);
+            }, { passive: true });
+            
+            window.addEventListener('orientationchange', () => {
+                setTimeout(updateViewportHeight, 200);
+            }, { passive: true });
+        })();
+        
+        // Enhanced Coffee Bean System Configuration
+        window.COFFEE_BEAN_CONFIG = {
+            // Bean Image Sources (will be loaded dynamically)
+            beanImages: [
+                'assets/images/coffee-bean.png',
+                'assets/images/coffee-bean-dark.png',
+                'assets/images/coffee-bean-light.png'
+            ],
+            
+            // Mathematical Density-Calculation
+            density: (() => {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                const hasWebGL = !!gl;
+                const devicePixelRatio = window.devicePixelRatio || 1;
+                const viewportArea = window.innerWidth * window.innerHeight;
+                const availableMemory = navigator.deviceMemory || 4;
+                
+                let densityFactor = 1.0;
+                
+                if (hasWebGL) densityFactor *= 1.2;
+                if (devicePixelRatio >= 2) densityFactor *= 1.1;
+                
+                if (availableMemory >= 8) densityFactor *= 1.3;
+                else if (availableMemory >= 4) densityFactor *= 1.0;
+                else densityFactor *= 0.8;
+                
+                if (viewportArea >= 8294400) densityFactor *= 1.3;
+                else if (viewportArea >= 2073600) densityFactor *= 1.2;
+                else if (viewportArea >= 1440000) densityFactor *= 1.1;
+                else if (viewportArea >= 921600) densityFactor *= 1.0;
+                else if (viewportArea >= 518400) densityFactor *= 0.85;
+                else if (viewportArea >= 307200) densityFactor *= 0.7;
+                else densityFactor *= 0.6;
+                
+                if (window.innerWidth <= 768) densityFactor *= 0.85;
+                if (window.innerWidth <= 480) densityFactor *= 0.75;
+                
+                return Math.min(1.6, Math.max(0.4, densityFactor));
+            })(),
+            
+            // Adaptive Rendering-Precision
+            precision: (() => {
+                const supportsFilterProperty = CSS.supports('filter', 'blur(1px)');
+                const supportsBackdropFilter = CSS.supports('backdrop-filter', 'blur(1px)');
+                const viewportArea = window.innerWidth * window.innerHeight;
+                
+                if (supportsBackdropFilter && supportsFilterProperty && viewportArea > 2073600) {
+                    return 'ultra-high';
+                } else if (supportsFilterProperty && viewportArea > 921600) {
+                    return 'high';
+                } else {
+                    return 'medium';
+                }
+            })(),
+            
+            // Animation Speed
+            animationSpeed: (() => {
+                const refreshRate = screen.refreshRate || 60;
+                const velocityMultiplier = parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-velocity-multiplier') || 1.0
+                );
+                
+                return (refreshRate > 60 ? 1.4 : 1.0) * velocityMultiplier;
+            })(),
+            
+            // Coffee Bean Size Range
+            beanSizeMin: parseFloat(
+                getComputedStyle(document.documentElement)
+                    .getPropertyValue('--bean-size-min') || 18
+            ),
+            beanSizeMax: parseFloat(
+                getComputedStyle(document.documentElement)
+                    .getPropertyValue('--bean-size-max') || 48
+            ),
+            
+            // Rotation Speeds
+            rotationSpeed: {
+                base: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-rotation-speed-base') || 0.5
+                ),
+                hover: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-rotation-speed-hover') || 1.2
+                ),
+                departure: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-rotation-speed-departure') || 3.0
+                )
+            },
+            
+            // Velocity Multipliers
+            velocityMultipliers: {
+                base: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-velocity-base') || 0.15
+                ),
+                hover: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-velocity-hover') || 1.8
+                ),
+                departure: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bean-velocity-departure') || 7.5
+                ),
+                exponent: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--departure-exponent') || 2.4
+                ),
+                duration: parseFloat(
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue('--departure-duration') || 1400
+                )
+            },
+            
+            // Performance Settings
+            enablePerformanceMonitoring: true,
+            targetFrameRate: 60,
+            adaptiveQuality: true,
+            memoryOptimization: true,
+            
+            // Animation States
+            states: {
+                normal: 'normal',
+                hover: 'hover',
+                departure: 'departure',
+                reducedMotion: 'reduced-motion'
+            }
+        };
+        
+        // Enhanced Element Validation System
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('CoffeeKiss - DOM Content Loaded - Validating Elements...');
+            
+            // Hide loading screen after a short delay
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                }, 800); // Hide after 800ms
+            }
+            
+            const criticalElements = {
+                canvas: document.getElementById('coffeeBeanSystem'),
+                button: document.getElementById('enterButton'),
+                logoContainer: document.querySelector('.logo-coffee-container'),
+                container: document.querySelector('.quantum-container'),
+                content: document.querySelector('.coffee-content'),
+                contentMatrix: document.querySelector('.content-matrix'),
+                ctaContainer: document.querySelector('.cta-coffee-container')
+            };
+            
+            let validationSuccess = true;
+            const validationReport = {};
+            
+            Object.entries(criticalElements).forEach(([name, element]) => {
+                const isValid = !!element;
+                validationReport[name] = {
+                    element,
+                    valid: isValid,
+                    attributes: isValid ? Object.keys(element.dataset || {}) : []
+                };
+                
+                if (!isValid) {
+                    console.error(`CRITICAL: Element ${name} not found in DOM!`);
+                    validationSuccess = false;
+                } else {
+                    console.log(`Ã¢Å“â€œ ${name} validated`);
+                }
+            });
+            
+            // Viewport Classification
+            const viewport = {
+                width: window.innerWidth,
+                height: window.innerHeight,
+                area: window.innerWidth * window.innerHeight,
+                ratio: window.innerWidth / window.innerHeight,
+                pixelRatio: window.devicePixelRatio || 1,
+                classification: (() => {
+                    const area = window.innerWidth * window.innerHeight;
+                    if (area >= 8294400) return 'ultra-high-4k';
+                    if (area >= 2073600) return 'high-fullhd';
+                    if (area >= 1440000) return 'standard-hd';
+                    if (area >= 921600) return 'medium-hd';
+                    if (area >= 518400) return 'tablet';
+                    if (area >= 307200) return 'mobile-large';
+                    return 'mobile-small';
+                })(),
+                beanCount: (() => {
+                    const baseCount = parseFloat(
+                        getComputedStyle(document.documentElement)
+                            .getPropertyValue('--bean-count-coefficient') || 80
+                    );
+                    return Math.round(baseCount * window.COFFEE_BEAN_CONFIG.density);
+                })()
+            };
+            
+            // Update Container Attributes
+            const container = criticalElements.container;
+            if (container) {
+                container.setAttribute('data-viewport-class', viewport.classification);
+                container.setAttribute('data-viewport-area', viewport.area);
+                container.setAttribute('data-bean-count', viewport.beanCount);
+                container.setAttribute('data-pixel-ratio', viewport.pixelRatio);
+            }
+            
+            // Configure Canvas
+            const canvas = criticalElements.canvas;
+            if (canvas) {
+                canvas.setAttribute('data-bean-density', window.COFFEE_BEAN_CONFIG.density.toFixed(3));
+                canvas.setAttribute('data-rendering-precision', window.COFFEE_BEAN_CONFIG.precision);
+                canvas.setAttribute('data-animation-speed', window.COFFEE_BEAN_CONFIG.animationSpeed.toFixed(3));
+                canvas.setAttribute('data-bean-count', viewport.beanCount);
+                canvas.setAttribute('data-webgl-support', !!canvas.getContext('webgl'));
+                
+                // Set optimal canvas dimensions
+                canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+                canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+            }
+            
+            if (validationSuccess) {
+                console.log('Ã¢Å“â€œ All critical elements validated');
+                console.log('Ã¢Å“â€œ Viewport Classification:', viewport.classification);
+                console.log('Ã¢Å“â€œ Bean Count:', viewport.beanCount);
+                console.log('Ã¢Å“â€œ CoffeeKiss Configuration Applied');
+            } else {
+                console.error('Ã¢Å“â€” Critical element validation failed');
+            }
+            
+            window.COFFEEKISS_VALIDATION_REPORT = validationReport;
+            window.COFFEEKISS_VIEWPORT_INFO = viewport;
+            window.COFFEEKISS_CONFIG = window.COFFEE_BEAN_CONFIG;
+        });
+    </script>
+    
+    <!-- Core Animation Engine - Coffee Bean System -->
+    <script src="assets/js/welcome.js"></script>
+    
+    <!-- Performance Monitoring System -->
+    <script>
+        if (typeof performance !== 'undefined' && performance.mark) {
+            performance.mark('coffeekiss-init-start');
+            
+            window.addEventListener('load', () => {
+                performance.mark('coffeekiss-init-end');
+                performance.measure('coffeekiss-initialization', 
+                                 'coffeekiss-init-start', 
+                                 'coffeekiss-init-end');
+                
+                const measure = performance.getEntriesByName('coffeekiss-initialization')[0];
+                if (measure) {
+                    const initTime = measure.duration.toFixed(2);
+                    console.log(`CoffeeKiss Initialization: ${initTime}ms`);
+                    
+                    if (measure.duration > 2000) {
+                        console.warn('High initialization time - applying density reduction');
+                        document.documentElement.style.setProperty('--bean-field-density', '0.7');
+                    } else if (measure.duration < 500) {
+                        console.log('Excellent performance - enabling enhancement mode');
+                        document.documentElement.style.setProperty('--bean-field-density', '1.2');
+                    }
+                    
+                    const container = document.querySelector('.quantum-container');
+                    if (container) {
+                        container.setAttribute('data-initialization-time', initTime);
+                        container.setAttribute('data-performance-classification', 
+                            measure.duration > 2000 ? 'reduced' : 
+                            measure.duration < 500 ? 'enhanced' : 'optimal');
+                    }
+                }
+            });
+        }
+        
+        // Error Recovery System
+        window.addEventListener('error', (event) => {
+            console.error('CoffeeKiss Error:', event.error);
+            
+            const container = document.querySelector('.quantum-container');
+            if (container) {
+                container.setAttribute('data-error-state', 'detected');
+                container.setAttribute('data-fallback-mode', 'recovery');
+            }
+        });
+        
+        // Cleanup on Unload
+        window.addEventListener('beforeunload', () => {
+            if (window.coffeeBeanEngine && window.coffeeBeanEngine.destroy) {
+                window.coffeeBeanEngine.destroy();
+            }
+            
+            if (typeof performance !== 'undefined' && performance.clearMarks) {
+                performance.clearMarks();
+                performance.clearMeasures();
+            }
+        });
+    </script>
+</body>
+</html>
