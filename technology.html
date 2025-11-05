@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferrum Insignia - Technologie und Innovation hinter unseren metallischen Visitenkarten">
+    <title>Ferrum Insignia - Technologie & Innovation</title>
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Forum&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/scroll-progress.css">
+    
+    <!-- Theme Stylesheets -->
+    <link rel="stylesheet" href="assets/css/theme-dark.css" id="theme-dark">
+    <link rel="stylesheet" href="assets/css/theme-light.css" id="theme-light" disabled>
+    
+    <!-- Page Specific Stylesheets -->
+    <link rel="stylesheet" href="assets/css/technology.css">
+    
+    <!-- CSS Viewport-Anpassungen -->
+    <style>
+        :root {
+            --vh: 1vh;
+            --particle-velocity-factor: 0.15; /* Optimierte Geschwindigkeit für Technologie-Partikel */
+        }
+        
+        /* Hero-Sektion mit dynamischer Höhenanpassung */
+        .hero-quantum {
+            position: relative;
+            width: 100%;
+            height: calc(var(--vh, 1vh) * 75);
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        /* Optimiertes CSS für konsistente Darstellung auf allen Geräten */
+        @media (max-width: 1199px) {
+            .hero-title {
+                font-size: calc(2.5rem + 2vw);
+            }
+            
+            .hero-subtitle {
+                font-size: calc(1.2rem + 0.5vw);
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .hero-quantum {
+                min-height: 500px;
+                height: calc(var(--vh, 1vh) * 70);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero-quantum {
+                min-height: 450px;
+                height: calc(var(--vh, 1vh) * 65);
+            }
+        }
+    </style>
+    
+    <!-- Critical CSS für Initiale Darstellung -->
+    <style>
+        /* Basis-Variablen für kritische Renderbereiche */
+        :root {
+            --twinkle-min-duration: 3s;
+            --twinkle-max-duration: 8s;
+            --reveal-offset: 30px;
+            --reveal-duration: 1.2s;
+            --highlight-color: var(--ferrum-gold-accent);
+        }
+        
+        /* Hero-Sektion mit Partikelsystem */
+        .hero-quantum {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--ferrum-pearl);
+            animation: heroReveal 2.5s var(--ease-quantum) forwards;
+            max-width: 800px;
+            padding: 0 var(--spacing-cellular);
+        }
+        
+        .hero-title {
+            font-family: var(--font-aristocrat);
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: var(--spacing-cellular);
+            background: linear-gradient(
+                135deg,
+                var(--ferrum-platinum) 0%,
+                #f5f5f5 25%,
+                var(--ferrum-platinum) 50%,
+                #f5f5f5 75%,
+                var(--ferrum-platinum) 100%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleBgAnimation 12s infinite linear;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-elegant);
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: var(--ferrum-silver);
+            margin-bottom: var(--spacing-organic);
+            line-height: 1.4;
+        }
+        
+        /* Animationen für Hero-Bereich */
+        @keyframes heroReveal {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes titleBgAnimation {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        
+        /* Navigations-TOC */
+        .technology-toc {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-molecular);
+            margin-top: var(--spacing-organic);
+        }
+        
+        .toc-button {
+            position: relative;
+            padding: var(--spacing-molecular) var(--spacing-cellular);
+            background: transparent;
+            border: 1px solid var(--ferrum-silver);
+            color: var(--ferrum-pearl);
+            font-family: var(--font-modern);
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all var(--duration-molecular) var(--ease-gravitational);
+            text-decoration: none;
+        }
+        
+        .toc-button .button-shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 6%, 
+                rgba(255,255,255,0.1) 11%,
+                rgba(255,255,255,0.5) 14%,
+                rgba(255,255,255,0.1) 17%,
+                transparent 22%,
+                transparent 100%
+            );
+            transition: all var(--duration-molecular) var(--ease-magnetic);
+        }
+        
+        .toc-button:hover .button-shimmer {
+            left: 100%;
+        }
+        
+        .toc-button:hover {
+            border-color: var(--ferrum-platinum);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(192,192,192,0.15);
+        }
+        
+        /* Hauptinhaltsbereich */
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-organic) var(--spacing-cellular);
+        }
+        
+        .section-container {
+            padding-top: var(--spacing-cosmic);
+            scroll-margin-top: 100px;
+        }
+        
+        .section-title {
+            font-family: var(--font-aristocrat);
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--ferrum-platinum);
+            margin-bottom: var(--spacing-organic);
+            position: relative;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: var(--ferrum-silver);
+        }
+        
+        /* Scroll-Animation Basis-Klassen */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(var(--reveal-offset));
+            transition: opacity var(--reveal-duration) var(--ease-quantum),
+                        transform var(--reveal-duration) var(--ease-gravitational);
+            will-change: opacity, transform;
+        }
+        
+        .reveal-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design Basis */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .technology-toc {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--spacing-atomic);
+            }
+            
+            .toc-button {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Spezieller Technology-Header Container -->
+    <div id="header-container" data-template="templates/technology-header.html"></div>
+    
+    <!-- Main Content -->
+    <main class="technology-quantum-container">
+        <!-- Hero Section mit technischen Partikeln -->
+        <section class="hero-quantum" id="hero">
+            <canvas id="technologyParticleSystem" class="hero-canvas"></canvas>
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="technology.title">Technologie & Innovation</h1>
+                <p class="hero-subtitle" data-i18n="technology.subtitle">Einblicke in unsere Fertigungsprozesse, Materialien und technologischen Innovationen, die Ferrum Insignia definieren.</p>
+                
+                <!-- Navigation zu den Hauptabschnitten -->
+                <div class="technology-toc">
+                    <a href="#process" class="toc-button" data-i18n="technology.toc.process">
+                        Herstellungsprozess
+                        <div class="button-shimmer"></div>
+                    </a>
+                    <a href="#innovation" class="toc-button" data-i18n="technology.toc.innovation">
+                        Innovation
+                        <div class="button-shimmer"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hauptinhalt -->
+        <div class="content-container">
+            <!-- Herstellungsprozess Section -->
+            <section id="process" class="section-container">
+                <h2 class="section-title" data-i18n="process.title">Technologie und Herstellungsprozess</h2>
+                
+                <div class="tech-timeline">
+                    <!-- Material Selection -->
+                    <div class="timeline-item reveal-element" data-reveal-delay="0">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 15.5h-2V14h-2v-2h4v6.5zm6-4.5h-2v-1.5h2v1.5zm0-3h-2V9.5h-1.5V11h-1V9.5H12V11h-1v1.5h1.5V14h1v-1.5H15V14h-1v1.5h1.5V17h2v-6z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Materialauswahl und Vorbereitung</h3>
+                            <p class="timeline-text">
+                                Unser Prozess beginnt mit der sorgfältigen Auswahl <span class="highlight-text">präzisionsgewalzter Metallblöcke</span>. Wir verwenden ausschließlich hochwertige Materialien wie eloxiertes Aluminium, rostfreien Edelstahl und 24K vergoldete Legierungen, die strengen Qualitätsstandards entsprechen. Die Materialplatten werden exakt zugeschnitten und für den CNC-Fräsprozess vorbereitet.
+                            </p>
+                            <div class="tech-specs">
+                                <div class="spec-item">
+                                    <div class="spec-label">Materialstärke:</div>
+                                    <div class="spec-value">0,5 mm - 0,8 mm</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Toleranz:</div>
+                                    <div class="spec-value">±0,02 mm</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Legierungen:</div>
+                                    <div class="spec-value">5 Premium-Varianten</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CNC Precision Milling -->
+                    <div class="timeline-item reveal-element" data-reveal-delay="1">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M19.1 19.1C14.2 24 6.5 24 1.6 19.1C-3.2 14.2-3.2 6.5 1.6 1.6C6.5-3.2 14.2-3.2 19.1 1.6C24 6.5 24 14.2 19.1 19.1zM9 9h6v6H9V9z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">CNC-Präzisionsfräsung</h3>
+                            <p class="timeline-text">
+                                Unsere eigens entwickelten <span class="highlight-text">5-Achsen-CNC-Maschinen</span> fräsen jede Karte mit mikrometergenauer Präzision. Mit Schnittgeschwindigkeiten von bis zu 20.000 U/min und speziell gehärteten Diamantfräswerkzeugen werden die Materialplatten mit mathematisch optimierten Pfaden bearbeitet, die Ausschuss minimieren und Qualität maximieren. Alle Details, von den Kanten bis zu den feinsten Gravuren, werden in einem einzigen Arbeitsgang gefertigt.
+                            </p>
+                            <div class="tech-specs">
+                                <div class="spec-item">
+                                    <div class="spec-label">Genauigkeit:</div>
+                                    <div class="spec-value">±0,005 mm</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Werkzeugwechsel:</div>
+                                    <div class="spec-value">Automatisch, 12 Positionen</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">CAM-Software:</div>
+                                    <div class="spec-value">Eigenentwicklung</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Surface Finishing -->
+                    <div class="timeline-item reveal-element" data-reveal-delay="2">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/>
+                                <path fill="currentColor" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Oberflächenveredelung</h3>
+                            <p class="timeline-text">
+                                Nach der CNC-Bearbeitung durchläuft jede Karte unseren proprietären <span class="highlight-text">mehrstufigen Veredelungsprozess</span>. Dies beinhaltet mechanische Polierverfahren, chemische Behandlungen und präzise Mikroschleiftechniken. Unsere Satin-Finish-Verfahren erzeugen eine einzigartige Textur, während das Metallglanz-Verfahren für einen perfekten Spiegeleffekt sorgt. Jede Karte wird individuell behandelt, um die optimale Haptik und visuelle Ästhetik zu gewährleisten.
+                            </p>
+                            <div class="tech-specs">
+                                <div class="spec-item">
+                                    <div class="spec-label">Oberflächenhärte:</div>
+                                    <div class="spec-value">7-9 Mohs</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Reflexionsgrad:</div>
+                                    <div class="spec-value">85-95% (Metallic)</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Oxidationsschutz:</div>
+                                    <div class="spec-value">Nano-Versiegelung</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Engraving & Personalization -->
+                    <div class="timeline-item reveal-element" data-reveal-delay="3">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 10H6v-2h8v2zm4-4H6v-2h12v2z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Gravur und Personalisierung</h3>
+                            <p class="timeline-text">
+                                Die Personalisierung erfolgt mittels <span class="highlight-text">hochpräziser Lasertechnologie</span> mit einer Auflösung von bis zu 1200 dpi. Unser proprietäres Laser-Mapping-System passt die Leistung dynamisch an das Grundmaterial und die gewünschte Tiefe an. Dies ermöglicht sowohl subtile, oberflächliche Gravuren als auch tiefere, taktile Elemente. Jede Karte wird mit einem einzigartigen alphanumerischen Code versehen, der ihre Authentizität garantiert.
+                            </p>
+                            <div class="tech-specs">
+                                <div class="spec-item">
+                                    <div class="spec-label">Laser-Typ:</div>
+                                    <div class="spec-value">Fiber/YAG Hybrid</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Min. Linienstärke:</div>
+                                    <div class="spec-value">0,05 mm</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Serialisierung:</div>
+                                    <div class="spec-value">128-Bit Einzigartig</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quality Control -->
+                    <div class="timeline-item reveal-element" data-reveal-delay="4">
+                        <div class="timeline-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Qualitätskontrolle</h3>
+                            <p class="timeline-text">
+                                Jede Karte durchläuft ein <span class="highlight-text">mehrstufiges Qualitätssicherungssystem</span>, bei dem sowohl automatisierte optische Inspektion als auch manuelle Überprüfung durch unsere Handwerksmeister stattfindet. Wir verwenden hochauflösende Mikroskope und computergestützte Messtechnologie, um jedes Detail zu verifizieren. Nur Karten, die alle 18 Qualitätsprüfpunkte bestehen, werden für die Verpackung freigegeben.
+                            </p>
+                            <div class="tech-specs">
+                                <div class="spec-item">
+                                    <div class="spec-label">Fehlerquote:</div>
+                                    <div class="spec-value">&lt;0,05%</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Prüfpunkte:</div>
+                                    <div class="spec-value">18 Parameter</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-label">Materialprüfung:</div>
+                                    <div class="spec-value">Spektroskopisch</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Innovation Section -->
+            <section id="innovation" class="section-container">
+                <h2 class="section-title" data-i18n="innovation.title">Innovation</h2>
+                
+                <div class="innovation-grid">
+                    <!-- NFC Technology -->
+                    <div class="innovation-card reveal-element" data-reveal-delay="0">
+                        <div class="innovation-icon">
+                            <svg viewBox="0 0 24 24" width="60" height="60">
+                                <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H4V4h16v16zM18 6h-5c-1.1 0-2 .9-2 2v2.28c-.6.35-1 .98-1 1.72 0 1.1.9 2 2 2s2-.9 2-2c0-.74-.4-1.38-1-1.72V8h3v8H8V8h2V6H6v12h12V6z"/>
+                            </svg>
+                        </div>
+                        <div class="innovation-content">
+                            <h3 class="innovation-title">NFC-Technologie Integration</h3>
+                            <p class="innovation-description">
+                                Unsere proprietäre <span class="highlight-text">NFC Quantum-Embedded Technologie</span> integriert einen Hochleistungs-NFC-Chip nahtlos in die Metallstruktur, ohne die Kartendicke zu beeinträchtigen. Mit 144 Byte EEPROM-Speicher können dynamische Inhalte wie digitale Visitenkarten, Portfolios oder direkte Kommunikationskanäle gespeichert werden. Die 13,56 MHz Übertragungsfrequenz ermöglicht Interaktionen mit praktisch allen modernen Smartphones.
+                            </p>
+                            <div class="innovation-features">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">ISO/IEC 14443A Kompatibilität</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Verschlüsselte Datenspeicherung</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Dynamisch aktualisierbare Inhalte</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Energieautarke Übertragung</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wood Composite Cards -->
+                    <div class="innovation-card reveal-element" data-reveal-delay="1">
+                        <div class="innovation-icon">
+                            <svg viewBox="0 0 24 24" width="60" height="60">
+                                <path fill="currentColor" d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                            </svg>
+                        </div>
+                        <div class="innovation-content">
+                            <h3 class="innovation-title">Holzkomposit Karten</h3>
+                            <p class="innovation-description">
+                                Unsere neueste Innovation sind <span class="highlight-text">Holzkomposit-Metallkarten</span>, die das Beste aus zwei Welten vereinen. Unter Verwendung von präzisionsgeschnittenen 0,3 mm dünnen Furnierblättern aus nachhaltiger Forstwirtschaft, die mittels Vakuuminfusion auf eine Metallbasis aufgebracht werden, kreieren wir ein einzigartiges haptisches Erlebnis. Die Holzschicht wird mit unserem proprietären Nano-Versiegelungsverfahren behandelt, das die natürliche Holzstruktur konserviert und gleichzeitig absolute Langlebigkeit garantiert.
+                            </p>
+                            <div class="innovation-features">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">5 exklusive Holzarten verfügbar</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Individuelle Maserung jeder Karte</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">FSC-zertifizierte Materialien</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Wasserabweisende Oberfläche</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Milling Techniques -->
+                    <div class="innovation-card reveal-element" data-reveal-delay="2">
+                        <div class="innovation-icon">
+                            <svg viewBox="0 0 24 24" width="60" height="60">
+                                <path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                            </svg>
+                        </div>
+                        <div class="innovation-content">
+                            <h3 class="innovation-title">Fortschrittliche Frästechniken</h3>
+                            <p class="innovation-description">
+                                Unser Forschungsteam hat <span class="highlight-text">proprietäre Algorithmen</span> für die CNC-Bearbeitung entwickelt, die konventionelle Frästechniken revolutionieren. Mit unserer patentierten Multi-Pass-Vektortechnik können wir Metallstrukturen mit variierenden Tiefen schaffen, die bisher unmöglich waren. Diese Technologie ermöglicht subtile, dreidimensionale Effekte und Texturvariationen, die sowohl visuell als auch haptisch wahrnehmbar sind – vom sanften, graduellen Übergang bis zu präzisen topografischen Strukturen.
+                            </p>
+                            <div class="innovation-features">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Variable Tiefenkontrolle bis zu 0,01 mm</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">3D-topografische Strukturen</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Präzisions-Mikrovertiefungen</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Patentierte Fräswegberechnung</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- QR Code Integration -->
+                    <div class="innovation-card reveal-element" data-reveal-delay="3">
+                        <div class="innovation-icon">
+                            <svg viewBox="0 0 24 24" width="60" height="60">
+                                <path fill="currentColor" d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v2h-2v-2h-2v-2h2V9h-2V7h2v2h2V7h2v2h-2v2h2v2zm-2 2h2v-2h-2v2zm2 2v2h-2v-2h2zm0 0v-2h2v2h-2zm-4 2h-2v-2h2v2zm0-4h-2v-2h2v2z"/>
+                            </svg>
+                        </div>
+                        <div class="innovation-content">
+                            <h3 class="innovation-title">QR-Code Integration</h3>
+                            <p class="innovation-description">
+                                Unsere <span class="highlight-text">Präzisions-QR-Technologie</span> graviert dynamische, hochauflösende QR-Codes direkt in die Metalloberfläche. Im Gegensatz zu herkömmlichen QR-Codes sind unsere Implementierungen ein integraler Bestandteil des Designs. Mit einer Fehlerkorrektur auf Reed-Solomon-Level Q (25%) gewährleisten wir eine zuverlässige Scan-Erkennung auch bei Oberflächenreflexionen. Die Codes können zu dynamischen URLs, digitalen Visitenkarten (vCard) oder sogar verschlüsselten Kontaktinformationen führen.
+                            </p>
+                            <div class="innovation-features">
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Ästhetisch integrierte Design-QR-Codes</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Dynamisch aktualisierbare URLs</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Verfolgbare Scan-Statistiken</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-dot"></div>
+                                    <div class="feature-text">Optimierte Kontrastverbesserung</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="innovation-cta reveal-element" data-reveal-delay="4">
+                    <p class="cta-text" data-i18n="innovation.cta.text">Erleben Sie selbst die technologische Exzellenz unserer metallischen Visitenkarten.</p>
+                    <a href="home.html#products" class="cta-button" data-i18n="innovation.cta.button">
+                        Kollektionen entdecken
+                        <div class="button-shimmer"></div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer Container -->
+    <div id="footer-container" data-template="templates/footer.html"></div>
+    
+    <!-- Viewport Höhenanpassung für konsistente Darstellung -->
+    <script>
+    // Viewport-Höhe korrekt setzen (wichtig für mobile Browser)
+    function setVhVariable() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    // Initial ausführen
+    setVhVariable();
+    
+    // Bei Resize und Orientierungswechsel neu berechnen
+    window.addEventListener('resize', setVhVariable);
+    window.addEventListener('orientationchange', setVhVariable);
+    </script>
+    
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/scroll-progress.js"></script>
+    
+    <!-- Seiten-spezifische Scripts -->
+    <script src="assets/js/technology.js"></script>
+</body>
+</html>
